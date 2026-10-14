@@ -1,0 +1,18 @@
+FLYWEISS — provera teksta pre slanja na pregled
+14.10.2026
+Izvor: 02_Website_Brief_DE_EN_FINAL.pdf, odeljci 3 i 4; struktura iz odeljaka 2 i 10.
+
+REZULTAT
+Glavni DE/EN pasusi, naslovi, CTA i nazivi polja sada odgovaraju tekstu iz briefinga. Sačuvane su reči, velika/mala slova i interpunkcija. Normalizovani su samo razmaci i prelomi redova iz PDF-a. Provereno je 104 tekstualna unosa ili doslovna izvoda u src/brief-copy.json.
+
+ISPRAVLJENO
+Vraćen FLYWEISS prefiks u naslovu kompanije. Uklonjene dopisane tačke sa naslova. Vraćena druga hero CTA Kontakt aufnehmen / Get in touch i veza na kontakt. Vraćeni puni nazivi navigacije i polja. Uklonjeni dopisani promotivni opisi, traka vrednosti i parafrazirane liste proizvoda, održivosti i partnera. Kartice/dijagram koriste naslove i doslovne izraze iz izvora.
+
+TEHNIČKE OZNAKE
+Oznake AI konceptualnih slika, alt tekstovi, pristupačne oznake i obaveštenje o lokalnoj formi su tehničke oznake, ne klijentski promotivni tekst. Pravne stranice su nacrti, jer odobreni pravni tekstovi nisu dostavljeni. Logo i boje slede naknadnu izričitu korisnikovu potvrdu brand table sa listom i Montserrat fontom.
+
+PROVERE
+Build i check prolaze. Tekst u pregledniku odgovara zaključanoj kopiji. Oba jezika proverena na 320, 390, 768, 1101, 1200, 1280 i 1440 px. Nema prelivanja ili JavaScript grešaka; lokalni nacrt kontakt upita radi.
+
+SLANJE
+Paket je spreman za slanje FLYWEISS na pregled/odobrenje. Ovo nije javno puštanje: pravni podaci, primalac kontakt upita, hosting/HTTPS i stvarno slanje forme nisu završeni. Lokalni URL nije dostupan primaocu na drugom računaru. ZIP sadrži snimke DE/EN desktopa i mobilnog prikaza, izvor, HTML build, logo i uputstvo. Ništa nije poslato eksternom primaocu.
