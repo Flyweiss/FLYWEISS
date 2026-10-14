@@ -34,11 +34,11 @@ Pravne stranice su `/de/impressum/`, `/de/datenschutz/`, `/en/legal-notice/`, `/
 
 ## Logo i vizuelni materijal
 
-Važeća vizuelna referenca je tabla sa listom u krugu koju je korisnik izričito potvrdio u dopuni. Ta dopuna zamenjuje raniji znak larve i natpis PROTEIN · FUTURE iz PDF-a.
+Važeća referenca logotipa je slika koju je korisnik dostavio 14. oktobra 2026. uz zahtev za zamenu: crni kružni luk i zelena segmentirana larva, sa natpisom FLYWEISS / PROTEIN • FUTURE. Ovaj zahtev zamenjuje prethodnu verziju logotipa sa listom.
 
-Primenjena paleta: tamnozelena `#144D32`, zelena `#4BAA67`, svetlozelena `#CDE8D1`, siva `#6B7280`, bela `#FFFFFF`. Providnost ovih boja koristi se za linije, slojeve preko slika i blage pozadine. Font sajta i natpisa je lokalni Montserrat.
+Primenjena paleta: tamnozelena `#144D32`, zelena `#4BAA67`, svetlozelena `#CDE8D1`, siva `#6B7280`, bela `#FFFFFF`. Providnost ovih boja koristi se za linije, slojeve preko slika i blage pozadine. Font sajta je lokalni Montserrat; slova novog logotipa su vektorske putanje precrtane iz korisnikove slike.
 
-`flyweiss-logo.svg` je horizontalna vektorska rekonstrukcija lista u krugu za zaglavlje. `flyweiss-logo-stacked.svg` prati vertikalni raspored glavne reference. Natpis je FLYWEISS / SUSTAINABLE PROTEIN SOLUTIONS. Slova su pretvorena u putanje, tako da logo ne zahteva instaliran font. Postoje svetla, siva i crna varijanta, znak bez teksta, transparentni PNG i favicon SVG/PNG/ICO. SVG je nacrtan kao vektor, bez automatskog precrtavanja ili uvećavanja rastera. Tabla ostaje izvor vizuelnog identiteta; konačna produkciona upotreba vektorske rekonstrukcije prati prethodno dogovoreni pregled.
+`flyweiss-logo.svg` i `flyweiss-logo-stacked.svg` prate novi korisnikov logo od 14. oktobra 2026: crni kružni luk, zelena segmentirana larva i natpis FLYWEISS / PROTEIN • FUTURE. Konture znaka i slova su vektorizovane iz dostavljene slike; SVG sadrži samo putanje, bez ugrađene bitmap slike ili zavisnosti od fonta. `flyweiss-logo-horizontal.svg` koristi iste elemente u horizontalnom rasporedu za zaglavlje, a `flyweiss-logo-white.svg` belu verziju za tamno podnožje. `flyweiss-logo.png` je transparentni PNG u 2760 × 2040 px. Favicon prikazuje samo gornji simbol, bez slova, na beloj pozadini: SVG, PNG 32 × 32 i 512 × 512, ICO sa šest veličina i Apple Touch ikona 180 × 180. Samostalni paket se nalazi u `output/brand-protein-future/`.
 
 Industrijske slike i prikaz larvi su postojeće AI ilustracije u radnom projektu. Prikazuju se uz DE/EN oznaku „Konceptualna vizualizacija planiranog projekta“. Nisu dokazi postojeće fabrike ili stvarnih proizvoda. Na strani su upotrebljene komprimovane WebP slike, sa manjim heroom za mobilni. Originali su zadržani u izvoru, ali se ne kopiraju u web build. Nisu preuzimane fotografije završnih proizvoda iz priloženog kolaža. Sve tri tematske kartice imaju pozadinsku sliku i isti raspored. Technology koristi postojeću industrijsku konceptualnu sliku. Partnership koristi novu AI ilustraciju razgovora o industrijskoj saradnji, generisanu ugrađenim imagegen alatom; original i prompt su u `src/assets/partnership-concept.png` i `partnership-concept-prompt.txt`. Ilustracija ne prikazuje stvarne partnere ili ugovore FLYWEISS.
 
@@ -78,10 +78,18 @@ Predaje se izvor, generisani build, vektorski i PNG logo, favicon, font licence 
 
 Proverene su obe jezičke verzije prema odeljcima 3 i 4 dostavljenog PDF-a. Sačuvane su reči, velika/mala slova i interpunkcija; za poređenje se uklanjaju samo prelomi redova i višestruki razmaci. Vraćeni su puni naslovi, pune navigacione oznake, druga hero CTA i nazivi polja. Uklonjeni su dopisani promotivni opisi, dodatna traka vrednosti, parafrazirana lista proizvoda i dodatni promotivni tekst uz održivost i partnere. Dijagram i tematske kartice koriste naslov ili doslovni izraz iz izvora.
 
-Obavezne oznake konceptualnih AI slika, pristupačne oznake kontrola i poruke o radu lokalnog pregleda nisu klijentski marketinški tekst. One ostaju kao tehničke oznake. Pravne stranice nemaju odobrene klijentske pravne tekstove; ostaju nacrti. Forma još ne šalje poruke. Sa strane logotipa/palete važi izričita kasnija korisnikova potvrda table sa listom i sloganom SUSTAINABLE PROTEIN SOLUTIONS.
+Obavezne oznake konceptualnih AI slika, pristupačne oznake kontrola i poruke o radu lokalnog pregleda nisu klijentski marketinški tekst. One ostaju kao tehničke oznake. Pravne stranice nemaju odobrene klijentske pravne tekstove; ostaju nacrti. Forma još ne šalje poruke. Za logo važi najnoviji korisnikov zahtev od 14. oktobra 2026. i slika sa segmentiranom larvom i sloganom PROTEIN • FUTURE; postojeća paleta ostatka sajta ostaje ista.
 
 Paket je namenjen slanju na pregled/odobrenje FLYWEISS, ne javnom puštanju produkcije.
 
 ## Hero prikaz — 14.10.2026
 
 Hero koristi novu konceptualnu vizualizaciju eksterijera fabrike u sumrak, prema korisnikovoj referenci. Izrađena je ugrađenim imagegen alatom i označena kao koncept planiranog projekta. Slika je u `src/assets/hero-exterior.png`, WebP varijante u `hero-exterior.webp` i `hero-exterior-mobile.webp`, a prompt u `hero-exterior-prompt.txt`. Na desktopu slika ima neutralni sloj za čitljiv tekst; na mobilnom je odvojena slika iznad teksta, bez zelenog sloja. Uklonjena je oznaka Draft for approval / Entwurf zur Freigabe iz podnožja. Odobreni DE/EN website copy je sačuvan.
+
+## Zamena logotipa — 14.10.2026
+
+Novi simbol i slogan PROTEIN • FUTURE zamenjeni su u zaglavlju, podnožju i kružnom prikazu održivosti. Ugrađena oznaka na fasadi hero slike zamenjena je ugrađenim imagegen alatom, uz očuvanje kompozicije fotografije. Izmenjena fotografija je `src/assets/hero-exterior-new-logo.png`; za sajt se koriste desktop i mobilni WebP sa istim novim logom. Prethodni original ostaje sačuvan. Prompt je u `src/assets/hero-exterior-new-logo-prompt.txt`.
+
+## Workspace archive
+
+The complete current website is at the repository root. `output/` preserves the logo packages, review bundle, copy audit, and browser screenshots from the workspace. `archive/wbpe-copy/` preserves the earlier website source and build; `archive/workspace-package.json` preserves the original parent workspace scripts. Git metadata, local tool configuration, and macOS metadata are excluded.

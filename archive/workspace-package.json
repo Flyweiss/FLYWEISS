@@ -1,0 +1,10 @@
+{
+  "name": "flyweiss-website-workspace",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix FLYWEISS run dev",
+    "start": "npm --prefix FLYWEISS run start",
+    "build": "npm --prefix FLYWEISS run build",
+    "check": "npm --prefix FLYWEISS run check"
+  }
+}
