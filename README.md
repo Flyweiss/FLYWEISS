@@ -81,3 +81,7 @@ Proverene su obe jezičke verzije prema odeljcima 3 i 4 dostavljenog PDF-a. Sač
 Obavezne oznake konceptualnih AI slika, pristupačne oznake kontrola i poruke o radu lokalnog pregleda nisu klijentski marketinški tekst. One ostaju kao tehničke oznake. Pravne stranice nemaju odobrene klijentske pravne tekstove; ostaju nacrti. Forma još ne šalje poruke. Sa strane logotipa/palete važi izričita kasnija korisnikova potvrda table sa listom i sloganom SUSTAINABLE PROTEIN SOLUTIONS.
 
 Paket je namenjen slanju na pregled/odobrenje FLYWEISS, ne javnom puštanju produkcije.
+
+## Hero prikaz — 14.10.2026
+
+Hero koristi novu konceptualnu vizualizaciju eksterijera fabrike u sumrak, prema korisnikovoj referenci. Izrađena je ugrađenim imagegen alatom i označena kao koncept planiranog projekta. Slika je u `src/assets/hero-exterior.png`, WebP varijante u `hero-exterior.webp` i `hero-exterior-mobile.webp`, a prompt u `hero-exterior-prompt.txt`. Na desktopu slika ima neutralni sloj za čitljiv tekst; na mobilnom je odvojena slika iznad teksta, bez zelenog sloja. Uklonjena je oznaka Draft for approval / Entwurf zur Freigabe iz podnožja. Odobreni DE/EN website copy je sačuvan.

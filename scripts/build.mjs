@@ -16,7 +16,7 @@ await rm(dist,{recursive:true,force:true});
 await mkdir(dist,{recursive:true});
 await writeFile(resolve(dist,'index.html'),render(template,'de'));
 await mkdir(resolve(dist,'assets'),{recursive:true});
-const assetNames = ['montserrat-400.ttf','montserrat-500.ttf','montserrat-600.ttf','montserrat-700.ttf','Montserrat-OFL.txt','facility-concept.webp','facility-concept-mobile.webp','insect-production-concept.webp','partnership-concept.webp','flyweiss-logo.svg','flyweiss-logo-black.svg','flyweiss-logo-gray.svg','flyweiss-logo-stacked.svg','flyweiss-logo-white.svg','flyweiss-mark.svg','flyweiss-mark-white.svg','favicon.svg','favicon.png','favicon.ico'];
+const assetNames = ['montserrat-400.ttf','montserrat-500.ttf','montserrat-600.ttf','montserrat-700.ttf','Montserrat-OFL.txt','facility-concept.webp','hero-exterior.webp','hero-exterior-mobile.webp','insect-production-concept.webp','partnership-concept.webp','flyweiss-logo.svg','flyweiss-logo-black.svg','flyweiss-logo-gray.svg','flyweiss-logo-stacked.svg','flyweiss-logo-white.svg','flyweiss-mark.svg','flyweiss-mark-white.svg','favicon.svg','favicon.png','favicon.ico'];
 for(const name of assetNames) await cp(resolve(root,'src/assets',name),resolve(dist,'assets',name));
 await cp(resolve(root,'src/styles.css'),resolve(dist,'styles.css'));
 const app = (await readFile(resolve(root,'src/app.js'),'utf8')).replace('__CONTENT__',JSON.stringify(content));
@@ -28,7 +28,7 @@ for(const lang of ['de','en']) {
     const slug = slugs[lang][kind];
     const title = content[lang][kind === 'legal' ? 'legalLink' : 'privacyLink'];
     const prefix = template.slice(0,template.indexOf('<main id="main">')).replace('<script src="/app.js" defer></script>','').replace(/<nav class="desktop-nav"[\s\S]*?<\/nav>/,'').replace(/<button class="menu-button"[\s\S]*?<\/button>/,'').replace(/<nav id="mobile-nav"[\s\S]*?<\/nav>/,'').replace(/href="#start"/g,`href="/${lang}/"`).replace(/href="#kontakt"/g,`href="/${lang}/#kontakt"`);
-    const body = `<main id="main" class="legal-main"><div class="container"><p class="eyebrow">{{legalPreview}}</p><h1>${escape(title)}</h1><p class="preview-notice">{{legalPreviewNote}}</p><p class="lead">{{${kind}Text}}</p><p class="lead">{{${kind}Pending}}</p><a class="text-link" href="/${lang}/"><span aria-hidden="true">←</span><span>{{returnHome}}</span></a></div></main><footer class="site-footer"><div class="container footer-bottom"><span>FLYWEISS DOO SOMBOR · SUSTAINABLE PROTEIN SOLUTIONS</span><span>{{privatePreview}}</span></div></footer></body></html>`;
+    const body = `<main id="main" class="legal-main"><div class="container"><p class="eyebrow">{{legalPreview}}</p><h1>${escape(title)}</h1><p class="preview-notice">{{legalPreviewNote}}</p><p class="lead">{{${kind}Text}}</p><p class="lead">{{${kind}Pending}}</p><a class="text-link" href="/${lang}/"><span aria-hidden="true">←</span><span>{{returnHome}}</span></a></div></main><footer class="site-footer"><div class="container footer-bottom"><span>FLYWEISS DOO SOMBOR · SUSTAINABLE PROTEIN SOLUTIONS</span></div></footer></body></html>`;
     let html = render(prefix+body,lang);
     html = html.replace(/<title>[^<]*<\/title>/,`<title>${escape(title)} — FLYWEISS</title>`).replace(/<meta name="description" content="[^"]*">/,`<meta name="description" content="${escape(content[lang].legalPreviewNote)}">`);
     html = html.replace(/https:\/\/flyweiss\.at\/(de|en)\//g,(_,l)=>`https://flyweiss.at/${l}/${slugs[l][kind]}/`);
