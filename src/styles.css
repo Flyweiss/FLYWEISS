@@ -35,20 +35,47 @@ input,textarea,select{border-color:#6B728066}input::placeholder,textarea::placeh
 @media(max-width:560px){.products-concept img{height:240px}.header-controls{gap:9px}}
 @media(max-width:1199px){.desktop-nav{display:none}.menu-button{display:block}.header-controls{margin-left:auto}}
 
-/* Exterior hero: retain the photograph's natural lighting. */
-.hero-image>img{object-position:center center}
-.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.82) 0%,rgba(0,0,0,.58) 38%,rgba(0,0,0,.08) 76%,transparent 100%),linear-gradient(0deg,rgba(0,0,0,.22),transparent 50%);pointer-events:none}
+/* Full-bleed exterior hero, with contrast concentrated behind the copy. */
+.hero{isolation:isolate}
+.hero-image{position:absolute;inset:0;width:100%;height:100%;z-index:-2}
+.hero-image>img{object-position:60% center}
+.hero::after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(5,18,14,.88) 0%,rgba(5,18,14,.74) 32%,rgba(5,18,14,.28) 63%,rgba(5,18,14,.06) 100%),linear-gradient(0deg,rgba(5,18,14,.48),transparent 40%);pointer-events:none}
+.hero-inner{min-height:clamp(620px,76svh,780px);padding:76px 0 88px;align-items:center}
+.hero-content{max-width:700px}
+.hero .eyebrow{font-size:10px;letter-spacing:1.6px;line-height:1.8;margin-bottom:25px}
+.hero h1{font-size:clamp(46px,4.4vw,68px);line-height:1.1;letter-spacing:-2.5px;margin-bottom:27px;text-wrap:balance}
 .hero h1 .accent{color:var(--light)}
+.hero-copy{max-width:540px;font-size:15px;line-height:1.85;color:#EDF4EF;margin-bottom:32px}
+.hero-actions{gap:14px;flex-wrap:wrap}
+.hero-actions .button{min-height:54px;padding:16px 24px;font-size:12px}
+.hero .button-primary{background:var(--light);color:var(--green)}
+.hero .button-outline{background:rgba(5,18,14,.24);border-color:#FFFFFF80;color:#FFFFFF}
+.hero .button-outline:hover{background:rgba(255,255,255,.14);border-color:#FFFFFF}
+.hero-location{margin-top:32px;color:#EDF4EF;font-size:11px}
+.hero .concept-caption{top:auto;left:auto;right:0;bottom:20px;max-width:100%;color:#EDF4EF;background:rgba(5,18,14,.55);border-color:#FFFFFF26;font-size:9px;padding:7px 10px}
+@media(max-width:1100px){
+ .hero-content{max-width:620px}
+ .hero h1{font-size:56px}
+}
 @media(max-width:780px){
- .hero{display:flex;flex-direction:column}
- .hero-image{position:relative;inset:auto;width:100%;height:clamp(220px,56vw,340px);flex-shrink:0}
- .hero-image>img{object-position:center center}
- .hero::after{display:none}
- .hero-inner{min-height:0;padding:32px 0 36px;display:block}
- .hero-content{max-width:none}
- .hero .eyebrow{margin-bottom:19px}
- .hero h1{margin-bottom:22px}
- .hero-copy{max-width:none;margin-bottom:25px}
- .hero-location{margin-top:23px}
- .hero .concept-caption{top:-40px;bottom:auto;left:0;right:auto;z-index:2;color:#FFFFFF;background:rgba(0,0,0,.72);border-color:#FFFFFF30;font-size:9px}
+ .hero-image>img{object-position:58% center}
+ .hero::after{background:linear-gradient(90deg,rgba(5,18,14,.85),rgba(5,18,14,.5)),linear-gradient(0deg,rgba(5,18,14,.6),transparent 50%)}
+ .hero-inner{min-height:660px;padding:60px 0 88px}
+ .hero-content{max-width:560px}
+ .hero h1{font-size:clamp(40px,6.6vw,52px);letter-spacing:-1.8px}
+ .hero-copy{font-size:14px;max-width:510px}
+ .hero .concept-caption{left:0;right:auto;bottom:18px}
+}
+@media(max-width:560px){
+ .hero-inner{min-height:max(660px,calc(100svh - 74px));padding:48px 0 82px;align-items:center}
+ .hero-content{max-width:100%}
+ .hero .eyebrow{font-size:9px;letter-spacing:1.2px;gap:10px;margin-bottom:24px;max-width:320px;align-items:flex-start}
+ .hero .eyebrow .live-dot{margin-top:5px}
+ .hero h1{font-size:clamp(32px,9vw,48px);letter-spacing:-1.3px;line-height:1.14;margin-bottom:24px}
+ .hero-copy{font-size:13px;line-height:1.85;margin-bottom:28px}
+ .hero-actions{flex-direction:column;align-items:stretch;gap:12px;max-width:340px}
+ .hero-actions .button{min-height:52px;padding:14px 20px;font-size:12px;gap:20px}
+ .hero-actions .button-outline{gap:12px}
+ .hero-location{font-size:10px;margin-top:26px}
+ .hero .concept-caption{font-size:8px;padding:6px 8px;bottom:16px}
 }
