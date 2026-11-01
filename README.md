@@ -52,7 +52,7 @@ Obavezni su ime, važeći e-mail, poruka od najmanje 10 znakova i saglasnost. Ko
 
 Tokom slanja kontrole su zaključane da se spreče dupli zahtevi. Potvrda uspeha prikazuje se samo kada servis vrati uspešan HTTP odgovor i `success: true`; tada se forma prazni. Kod odbijanja, ograničenja zahteva, prekida mreže ili isteka 20 sekundi unos ostaje u formi. Nema automatskog ponovnog slanja. Tekstovi za sve tokove postoje na DE/EN, uključujući promenu jezika dok zahtev traje. Bez JavaScript-a forma koristi standardni POST i Web3Forms stranicu za rezultat.
 
-Obaveštenje uz formu i DE/EN stranice privatnosti opisuju slanje preko Web3Forms. Podaci firme i potpuni pravni tekstovi i dalje zahtevaju potvrdu FLYWEISS. Nema dodate analitike ili kolačića.
+DE/EN stranice privatnosti opisuju slanje preko Web3Forms; link na njih je ispod forme. Uvodno obaveštenje iznad polja uklonjeno je na korisnikov zahtev. Podaci firme i potpuni pravni tekstovi i dalje zahtevaju potvrdu FLYWEISS. Nema dodate analitike ili kolačića.
 
 Aktivni domen je `https://www.flyweiss.com`; `https://flyweiss.com` preusmerava na njega uz očuvanje putanje i query parametara. Sajt ostaje na Shipveli, u projektu iz `shipvela.json`. Build ažurira canonical/hreflang oznake i sitemap na aktivni domen; postojeća zaštita `noindex` ostaje do potvrde završnih pravnih tekstova.
 
