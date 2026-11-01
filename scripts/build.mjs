@@ -31,7 +31,7 @@ for(const lang of ['de','en']) {
     const body = `<main id="main" class="legal-main"><div class="container"><p class="eyebrow">{{legalPreview}}</p><h1>${escape(title)}</h1><p class="preview-notice">{{legalPreviewNote}}</p><p class="lead">{{${kind}Text}}</p><p class="lead">{{${kind}Pending}}</p><a class="text-link" href="/${lang}/"><span aria-hidden="true">←</span><span>{{returnHome}}</span></a></div></main><footer class="site-footer"><div class="container footer-bottom"><span>FLYWEISS DOO SOMBOR · PROTEIN • FUTURE</span></div></footer></body></html>`;
     let html = render(prefix+body,lang);
     html = html.replace(/<title>[^<]*<\/title>/,`<title>${escape(title)} — FLYWEISS</title>`).replace(/<meta name="description" content="[^"]*">/,`<meta name="description" content="${escape(content[lang].legalPreviewNote)}">`);
-    html = html.replace(/https:\/\/flyweiss\.at\/(de|en)\//g,(_,l)=>`https://flyweiss.at/${l}/${slugs[l][kind]}/`);
+    html = html.replace(/https:\/\/www\.flyweiss\.com\/(de|en)\//g,(_,l)=>`https://www.flyweiss.com/${l}/${slugs[l][kind]}/`);
     html = html.replace(/href="\/(de|en)\/" data-lang/g,(_,l)=>`href="/${l}/${slugs[l][kind]}/" data-lang`);
     html = html.replace(`data-lang="${lang}"`,`data-lang="${lang}" aria-current="true"`);
     await mkdir(resolve(dist,lang,slug),{recursive:true});
@@ -44,5 +44,5 @@ for(const [route,anchor] of [['investment-policy','investoren'],['contact-us','k
 }
 await writeFile(resolve(dist,'robots.txt'),'User-agent: *\nDisallow: /\n# Local review build. Indexing requires FLYWEISS approval.\n');
 const urls = ['de/','en/','de/impressum/','de/datenschutz/','en/legal-notice/','en/privacy/'];
-await writeFile(resolve(dist,'sitemap.xml'),`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${urls.map(path=>`<url><loc>https://flyweiss.at/${path}</loc></url>`).join('\n')}\n</urlset>\n`);
+await writeFile(resolve(dist,'sitemap.xml'),`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${urls.map(path=>`<url><loc>https://www.flyweiss.com/${path}</loc></url>`).join('\n')}\n</urlset>\n`);
 console.log('Built FLYWEISS: 7 sections, prerendered DE/EN, 4 legal review pages, sitemap, noindex preview.');

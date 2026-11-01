@@ -1,6 +1,6 @@
-# FLYWEISS — radna verzija za pregled
+# FLYWEISS — sajt i izvor projekta
 
-Datum: 14.10.2026. Nije javno objavljena. Logo, tekstovi, vizualizacije i konačni kontakt podaci zahtevaju prihvatanje FLYWEISS.
+Aktuelno: 01.11.2026. Sajt je objavljen na Shipveli i povezan sa domenom `www.flyweiss.com`. Kontakt forma koristi Web3Forms; detalji i obim provere su u odeljku „Kontakt forma“. Pravni tekstovi i konačni kontakt podaci još zahtevaju potvrdu FLYWEISS. Odeljci od 14.10.2026. čuvaju istoriju pripreme i pregleda.
 
 ## Pokretanje
 
@@ -30,7 +30,7 @@ Početna stranica ima sedam celina: početna, kompanija, tehnologija i proces, p
 
 Jezici su pripremljeni unapred na `/de/` i `/en/`, tako da osnovni sadržaj postoji i bez JavaScript-a. Jezički prekidač održava odabranu sekciju i podatke trenutno unete u obrazac. Postoje različiti naslovi, opisi, canonical i hreflang oznake.
 
-Pravne stranice su `/de/impressum/`, `/de/datenschutz/`, `/en/legal-notice/`, `/en/privacy/`. To su jasno označeni nacrti sa podacima koje treba potvrditi, a ne gotovi pravni dokumenti. Preview koristi `noindex, nofollow` i robots `Disallow: /`. Predviđena domena `flyweiss.at` je korišćena za SEO pripremu; vlasništvo, DNS, hosting i aktivni HTTPS još nisu potvrđeni.
+Pravne stranice su `/de/impressum/`, `/de/datenschutz/`, `/en/legal-notice/`, `/en/privacy/`. To su jasno označeni nacrti sa podacima koje treba potvrditi, a ne gotovi pravni dokumenti. Build koristi `noindex, nofollow` i robots `Disallow: /`. Domen `www.flyweiss.com`, DNS i HTTPS su povezani 01.11.2026; canonical i sitemap koriste tu adresu.
 
 ## Logo i vizuelni materijal
 
@@ -44,11 +44,19 @@ Industrijske slike i prikaz larvi su postojeće AI ilustracije u radnom projektu
 
 Montserrat fontovi se služe lokalno. OFL licenca je u `src/assets/Montserrat-OFL.txt`. Repozitorijum sadrži izvor i resurse pregledane FLYWEISS verzije.
 
-## Kontakt forma u pregledu
+## Kontakt forma — Web3Forms, 01.11.2026.
 
-Forma ima ime, kompaniju, e-mail, oblast interesovanja, poruku i obaveznu potvrdu pročitanog obaveštenja. Validira obavezne podatke, ima skriveno honeypot polje i priprema pregled/tekstualno preuzimanje nacrta. Ne šalje e-mail, ne skladišti upite na serveru i ne prikazuje lažnu potvrdu slanja. Uneti podaci nestaju pri napuštanju/ponovnom učitavanju stranice; preuzeti nacrt ostaje kod korisnika. Nema kolačića ili analitike.
+Forma šalje upite direktno iz pregledača na `https://api.web3forms.com/submit`, koristeći korisnikov Web3Forms access key u skrivenom polju u `src/index.html`. Primalac je adresa povezana sa tim ključem u Web3Forms; ovde se ne postavlja zasebna adresa primaoca. To je javni identifikator forme, namenjen klijentskom kodu, prema [Web3Forms dokumentaciji](https://docs.web3forms.com/getting-started/faq).
 
-Za stvarno slanje treba potvrditi adresu primaoca i odabrati servis ili backend pod kontrolom FLYWEISS. Tada implementirati serversku validaciju, honeypot proveru, ograničenje broja zahteva, zaštitu od botova i odgovarajuće obaveštenje o obradi podataka. Samo klijentski honeypot nije dovoljna zaštita za javni servis. Ne dodavati plaćeni servis bez saglasnosti. Kontakt uvod iz briefinga opisuje budući javni rad; neposredno iznad forme jasno je označeno ponašanje trenutne radne verzije.
+Obavezni su ime, važeći e-mail, poruka od najmanje 10 znakova i saglasnost. Kompanija je opciona. Zahtev uključuje oblast interesovanja, jezik i adresu stranice bez query parametara. Skriveni `website` i `botcheck` služe kao honeypot; obradu spama i ograničenje zahteva pruža Web3Forms. Dodatna CAPTCHA i plaćene funkcije nisu uključene.
+
+Tokom slanja kontrole su zaključane da se spreče dupli zahtevi. Potvrda uspeha prikazuje se samo kada servis vrati uspešan HTTP odgovor i `success: true`; tada se forma prazni. Kod odbijanja, ograničenja zahteva, prekida mreže ili isteka 20 sekundi unos ostaje u formi. Nema automatskog ponovnog slanja. Tekstovi za sve tokove postoje na DE/EN, uključujući promenu jezika dok zahtev traje. Bez JavaScript-a forma koristi standardni POST i Web3Forms stranicu za rezultat.
+
+Obaveštenje uz formu i DE/EN stranice privatnosti opisuju slanje preko Web3Forms. Podaci firme i potpuni pravni tekstovi i dalje zahtevaju potvrdu FLYWEISS. Nema dodate analitike ili kolačića.
+
+Aktivni domen je `https://www.flyweiss.com`; `https://flyweiss.com` preusmerava na njega uz očuvanje putanje i query parametara. Sajt ostaje na Shipveli, u projektu iz `shipvela.json`. Build ažurira canonical/hreflang oznake i sitemap na aktivni domen; postojeća zaštita `noindex` ostaje do potvrde završnih pravnih tekstova.
+
+Provera 01.11.2026: build, postojeći check i Playwright provere obaveznih polja, saglasnosti, honeypota, sadržaja zahteva, duplog slanja, promene jezika tokom slanja, uspeha, odbijanja API-ja, HTTP 500/429, mrežne greške i očuvanja unosa. Pored provera sa simuliranim API odgovorima, na korisnikov zahtev poslat je jedan stvarni test preko žive EN forme 01.11.2026. (ID: `FLYWEISS-LIVE-2026-11-01T20:55:03.518Z`). Web3Forms je potvrdio uspeh i forma je ispraznila polja. Prijem u sandučetu primaoca nije zasebno proveren. Dokaz i rezultat su u `output/playwright/contact-live-success.png` i `output/playwright/web3forms-live-result.json`.
 
 ## Pregled i provere
 

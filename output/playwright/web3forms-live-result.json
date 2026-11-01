@@ -1,0 +1,12 @@
+{
+  "testedAtUtc": "2026-11-01T20:55:03.518Z",
+  "testId": "FLYWEISS-LIVE-2026-11-01T20:55:03.518Z",
+  "url": "https://www.flyweiss.com/en/#kontakt",
+  "testSender": "website-test@flyweiss.com",
+  "realSubmissions": 1,
+  "apiAccepted": true,
+  "successMessage": "Your message was submitted successfully.",
+  "formReset": true,
+  "inboxReceiptVerified": false,
+  "evidence": "contact-live-success.png"
+}
