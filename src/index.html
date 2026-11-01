@@ -1,46 +1,147 @@
 <!doctype html>
 <html lang="{{lang}}">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#144D32"><meta name="description" content="{{metaDescription}}"><meta name="robots" content="noindex, nofollow">
-<title>{{title}}</title><link rel="canonical" href="https://www.flyweiss.com/{{lang}}/"><link rel="alternate" hreflang="de" href="https://www.flyweiss.com/de/"><link rel="alternate" hreflang="en" href="https://www.flyweiss.com/en/"><link rel="alternate" hreflang="x-default" href="https://www.flyweiss.com/de/">
-<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="icon" href="/assets/favicon.png" sizes="32x32" type="image/png"><link rel="icon" href="/assets/favicon.ico" sizes="16x16 32x32 48x48 64x64 128x128 256x256"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png"><link rel="preload" href="/assets/montserrat-400.ttf" as="font" type="font/ttf" crossorigin><link rel="stylesheet" href="/styles.css"><script src="/app.js" defer></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0d1713">
+<meta name="description" content="{{metaDescription}}">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{title}}">
+<meta property="og:description" content="{{metaDescription}}">
+<meta property="og:url" content="https://www.flyweiss.com/{{localePath}}">
+<title>{{title}}</title>
+<link rel="canonical" href="https://www.flyweiss.com/{{localePath}}">
+<link rel="alternate" hreflang="de" href="https://www.flyweiss.com/">
+<link rel="alternate" hreflang="en" href="https://www.flyweiss.com/en/">
+<link rel="alternate" hreflang="x-default" href="https://www.flyweiss.com/">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/assets/favicon.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/assets/favicon.ico" sizes="16x16 32x32 48x48 64x64 128x128 256x256">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="stylesheet" href="/styles.css">
+<script src="/app.js" defer></script>
 </head>
 <body>
-<svg class="icon-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
-<symbol id="icon-leaf" viewBox="0 0 32 32"><path d="M6 26C5 13 14 6 27 5c0 13-8 21-21 21Zm0 0L22 10"/></symbol>
-<symbol id="icon-process" viewBox="0 0 32 32"><path d="M7 5v22M16 5v22M25 5v22"/><rect x="4" y="10" width="6" height="7" rx="1"/><rect x="13" y="19" width="6" height="5" rx="1"/><rect x="22" y="6" width="6" height="7" rx="1"/></symbol>
-<symbol id="icon-cycle" viewBox="0 0 32 32"><path d="M26 12A11 11 0 0 0 6 11M6 5v6h6M6 20a11 11 0 0 0 20 1M26 27v-6h-6"/></symbol>
-<symbol id="icon-partner" viewBox="0 0 32 32"><circle cx="11" cy="11" r="4"/><path d="M3 26v-3a8 8 0 0 1 16 0v3M22 7a4 4 0 0 1 0 8M24 20a7 7 0 0 1 5 6"/></symbol>
-<symbol id="icon-check" viewBox="0 0 32 32"><path d="m9 16 5 5 10-11M16 3l11 4v9c0 7-11 13-11 13S5 23 5 16V7Z"/></symbol>
-<symbol id="icon-bolt" viewBox="0 0 32 32"><path d="M18 3 7 18h8l-1 11 11-15h-8Z"/></symbol>
-</defs></svg>
 <a class="skip-link" href="#main" data-i18n="skip">{{skip}}</a>
-<header class="site-header"><div class="header-inner">
-<a class="brand" href="#start" aria-label="{{brandLabel}}" data-i18n-aria="brandLabel"><img src="/assets/flyweiss-logo-horizontal.svg" width="225" height="58" alt="FLYWEISS · PROTEIN • FUTURE"></a>
-<nav class="desktop-nav" aria-label="{{navigation}}" data-i18n-aria="navigation"><a href="#start" data-i18n="navHome" aria-current="location">{{navHome}}</a><a href="#unternehmen" data-i18n="navAbout">{{navAbout}}</a><a href="#technologie" data-i18n="navTechnology">{{navTechnology}}</a><a href="#produkte" data-i18n="navProducts">{{navProducts}}</a><a href="#nachhaltigkeit" data-i18n="navSustainability">{{navSustainability}}</a><a href="#investoren" data-i18n="navInvestors">{{navInvestors}}</a></nav>
-<div class="header-controls"><div class="language-switch" aria-label="{{languageLabel}}" data-i18n-aria="languageLabel"><a href="/de/" data-lang="de" lang="de" hreflang="de" aria-label="Deutsch">DE</a><span aria-hidden="true">/</span><a href="/en/" data-lang="en" lang="en" hreflang="en" aria-label="English">EN</a></div><a class="button header-cta" href="#kontakt"><span data-i18n="heroSecondary">{{heroSecondary}}</span><span aria-hidden="true">↗</span></a><button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="{{openMenu}}"><span></span><span></span></button></div>
-</div><nav id="mobile-nav" class="mobile-nav" hidden aria-label="{{navigation}}" data-i18n-aria="navigation"><a href="#start" data-i18n="navHome">{{navHome}}</a><a href="#unternehmen" data-i18n="navAbout">{{navAbout}}</a><a href="#technologie" data-i18n="navTechnology">{{navTechnology}}</a><a href="#produkte" data-i18n="navProducts">{{navProducts}}</a><a href="#nachhaltigkeit" data-i18n="navSustainability">{{navSustainability}}</a><a href="#investoren" data-i18n="navInvestors">{{navInvestors}}</a><a href="#kontakt" data-i18n="navContact">{{navContact}}</a></nav></header>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="#start" aria-label="{{brandLabel}}" data-i18n-aria="brandLabel"><img src="/assets/flyweiss-logo-white.svg" width="200" height="55" alt="FLYWEISS · PROTEIN • FUTURE"></a>
+    <nav class="desktop-nav" aria-label="{{navigation}}" data-i18n-aria="navigation">
+      <a href="#unternehmen" data-i18n="navAbout">{{navAbout}}</a>
+      <a href="#technologie" data-i18n="navTechnology">{{navTechnology}}</a>
+      <a href="#produkte" data-i18n="navProducts">{{navProducts}}</a>
+      <a href="#investoren" data-i18n="navInvestors">{{navInvestors}}</a>
+    </nav>
+    <div class="header-controls">
+      <div class="language-switch" aria-label="{{languageLabel}}" data-i18n-aria="languageLabel">
+        <a href="/" data-lang="de" lang="de" hreflang="de" aria-label="Deutsch">DE</a>
+        <a href="/en/" data-lang="en" lang="en" hreflang="en" aria-label="English">EN</a>
+      </div>
+      <a class="button header-cta" href="#kontakt"><span data-i18n="navContact">{{navContact}}</span><span aria-hidden="true">↗</span></a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="{{openMenu}}"><span></span><span></span></button>
+    </div>
+  </div>
+  <nav id="mobile-nav" class="mobile-nav" hidden aria-label="{{navigation}}" data-i18n-aria="navigation">
+    <a href="#unternehmen" data-i18n="navAbout">{{navAbout}}</a>
+    <a href="#technologie" data-i18n="navTechnology">{{navTechnology}}</a>
+    <a href="#produkte" data-i18n="navProducts">{{navProducts}}</a>
+    <a href="#investoren" data-i18n="navInvestors">{{navInvestors}}</a>
+    <a href="#kontakt" data-i18n="navContact">{{navContact}}</a>
+  </nav>
+</header>
 <main id="main">
-<section id="start" class="hero section-anchor">
-<picture class="hero-image"><source media="(max-width:780px)" srcset="/assets/hero-exterior-new-logo-mobile.webp"><img src="/assets/hero-exterior-new-logo.webp" width="1672" height="941" fetchpriority="high" alt="{{facilityAlt}}" data-i18n-alt="facilityAlt"></picture>
-<div class="container hero-inner"><div class="hero-content"><p class="eyebrow"><span class="live-dot" aria-hidden="true"></span><span data-i18n="statusShort">{{statusShort}}</span></p><h1><span data-i18n="headline1">{{headline1}}</span><span class="accent" data-i18n="headline2">{{headline2}}</span></h1><p class="hero-copy" data-i18n="homeCopy">{{homeCopy}}</p><div class="hero-actions"><a class="button button-primary" href="#unternehmen"><span data-i18n="learnMore">{{learnMore}}</span><span aria-hidden="true">→</span></a><a class="button button-outline" href="#kontakt"><span class="circle-arrow" aria-hidden="true">↗</span><span data-i18n="heroSecondary">{{heroSecondary}}</span></a></div><p class="hero-location"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 0 1 14 0Z"/><circle cx="12" cy="10" r="2"/></svg><span data-i18n="location">{{location}}</span></p></div><p class="concept-caption" data-i18n="conceptCaption">{{conceptCaption}}</p></div>
-</section>
-<section id="unternehmen" class="section section-anchor about-section"><div class="container"><div class="section-heading"><div><p class="eyebrow" data-i18n="aboutEyebrow">{{aboutEyebrow}}</p><h2 data-i18n="aboutTitle">{{aboutTitle}}</h2></div><p class="lead" data-i18n="aboutCopy">{{aboutCopy}}</p></div>
-<div class="topic-grid">
-<a class="topic-card protein-card" href="#produkte"><img src="/assets/insect-production-concept.webp" width="1536" height="1024" loading="lazy" alt="{{macroAlt}}" data-i18n-alt="macroAlt"><div class="topic-content"><span class="topic-number">01 /</span><h3 data-i18n="topic1">{{topic1}}</h3><p data-i18n="topic1Detail">{{topic1Detail}}</p><span class="topic-link"><span data-i18n="explore">{{explore}}</span><span aria-hidden="true">↗</span></span><small data-i18n="macroCaption">{{macroCaption}}</small></div></a>
-<a class="topic-card tech-card" href="#technologie"><img src="/assets/facility-concept.webp" width="1536" height="1024" loading="lazy" alt="{{technologyCardAlt}}" data-i18n-alt="technologyCardAlt"><div class="topic-content"><span class="topic-number">02 /</span><h3 data-i18n="topic2">{{topic2}}</h3><p data-i18n="topic2Detail">{{topic2Detail}}</p><span class="topic-link"><span data-i18n="explore">{{explore}}</span><span aria-hidden="true">↗</span></span><small data-i18n="macroCaption">{{macroCaption}}</small></div></a>
-<a class="topic-card partner-card" href="#investoren"><img src="/assets/partnership-concept.webp" width="1000" height="1000" loading="lazy" alt="{{partnershipCardAlt}}" data-i18n-alt="partnershipCardAlt"><div class="topic-content"><span class="topic-number">03 /</span><h3 data-i18n="topic3">{{topic3}}</h3><p data-i18n="topic3Detail">{{topic3Detail}}</p><span class="topic-link"><span data-i18n="explore">{{explore}}</span><span aria-hidden="true">↗</span></span><small data-i18n="macroCaption">{{macroCaption}}</small></div></a>
-</div></div></section>
-<section id="technologie" class="section section-anchor technology-section"><div class="container"><div class="section-heading"><div><p class="eyebrow" data-i18n="technologyEyebrow">{{technologyEyebrow}}</p><h2 data-i18n="technologyTitle">{{technologyTitle}}</h2></div><p class="lead" data-i18n="technologyCopy">{{technologyCopy}}</p></div><div class="process-grid">
-<div class="process-step"><span class="step-top"><span>01</span><svg class="icon" aria-hidden="true"><use href="#icon-leaf"/></svg></span><h3 data-i18n="process1">{{process1}}</h3><span class="process-arrow" aria-hidden="true">→</span></div>
-<div class="process-step"><span class="step-top"><span>02</span><svg class="icon" aria-hidden="true"><use href="#icon-process"/></svg></span><h3 data-i18n="process2">{{process2}}</h3><span class="process-arrow" aria-hidden="true">→</span></div>
-<div class="process-step"><span class="step-top"><span>03</span><svg class="icon" aria-hidden="true"><use href="#icon-cycle"/></svg></span><h3 data-i18n="process3">{{process3}}</h3></div>
-</div><div class="quality-row"><div><span data-i18n="quality1">{{quality1}}</span><span data-i18n="quality2">{{quality2}}</span><span data-i18n="quality3">{{quality3}}</span></div></div></div></section>
-<section id="produkte" class="section section-anchor products-section"><div class="container products-grid"><div><p class="eyebrow" data-i18n="productEyebrow">{{productEyebrow}}</p><h2 data-i18n="productTitle">{{productTitle}}</h2><p class="lead" data-i18n="productCopy">{{productCopy}}</p></div><figure class="products-concept"><img src="/assets/insect-production-concept.webp" width="1536" height="1024" loading="lazy" alt="{{macroAlt}}" data-i18n-alt="macroAlt"><figcaption data-i18n="macroCaption">{{macroCaption}}</figcaption></figure></div></section>
-<section id="nachhaltigkeit" class="section section-anchor sustainability-section"><div class="container sustainability-grid"><div class="sustain-copy"><p class="eyebrow" data-i18n="sustainEyebrow">{{sustainEyebrow}}</p><h2 data-i18n="sustainTitle">{{sustainTitle}}</h2><p class="lead" data-i18n="sustainCopy">{{sustainCopy}}</p></div><div class="resource-diagram"><div class="resource-orbit"><div class="orbit-center"><img src="/assets/flyweiss-mark-white.svg" alt="" width="90" height="90"></div><span class="orbit-node node-one"><svg class="icon" aria-hidden="true"><use href="#icon-bolt"/></svg></span><span class="orbit-node node-two"><svg class="icon" aria-hidden="true"><use href="#icon-cycle"/></svg></span><span class="orbit-node node-three"><svg class="icon" aria-hidden="true"><use href="#icon-leaf"/></svg></span></div></div></div></section>
-<section id="investoren" class="section section-anchor investor-section"><div class="container investor-grid"><div><p class="eyebrow" data-i18n="investorEyebrow">{{investorEyebrow}}</p><h2 data-i18n="investorTitle">{{investorTitle}}</h2><a class="button button-primary" href="#kontakt" data-interest="investment"><span data-i18n="investorCta">{{investorCta}}</span><span aria-hidden="true">↗</span></a></div><div><p class="lead" data-i18n="investorCopy">{{investorCopy}}</p></div></div></section>
-<section id="kontakt" class="section section-anchor contact-section"><div class="container contact-grid"><div><p class="eyebrow" data-i18n="contactEyebrow">{{contactEyebrow}}</p><h2 data-i18n="contactTitle">{{contactTitle}}</h2><p class="lead" data-i18n="contactIntro">{{contactIntro}}</p><div class="contact-details"><h3>FLYWEISS DOO SOMBOR</h3><p data-i18n="location">{{location}}</p><p>www.flyweiss.com</p><p class="contact-email"><a href="mailto:office@flyweiss.com">office@flyweiss.com</a></p></div></div>
-<form id="contact-form" class="contact-form" action="https://api.web3forms.com/submit" method="POST"><input type="hidden" name="access_key" value="0e24c4d6-8f78-42cb-b097-83b32f42a52d"><input type="hidden" name="subject" value="FLYWEISS website enquiry"><input type="hidden" name="from_name" value="FLYWEISS Website"><input type="checkbox" name="botcheck" tabindex="-1" aria-hidden="true" style="display:none"><div class="form-row"><div class="form-field"><label for="name" data-i18n="fieldName">{{fieldName}}</label><input id="name" name="name" autocomplete="name" required maxlength="120"></div><div class="form-field"><label for="company" data-i18n="fieldCompany">{{fieldCompany}}</label><input id="company" name="company" autocomplete="organization" maxlength="160"></div></div><div class="form-row"><div class="form-field"><label for="email" data-i18n="fieldEmail">{{fieldEmail}}</label><input id="email" name="email" type="email" autocomplete="email" required maxlength="254"></div><div class="form-field"><label for="interest" data-i18n="fieldInterest">{{fieldInterest}}</label><select id="interest" name="interest"><option value="general" data-i18n="interestGeneral">{{interestGeneral}}</option><option value="investment" data-i18n="interestInvestment">{{interestInvestment}}</option><option value="partnership" data-i18n="interestPartnership">{{interestPartnership}}</option></select></div></div><div class="form-field"><label for="message" data-i18n="fieldMessage">{{fieldMessage}}</label><textarea id="message" name="message" required minlength="10" maxlength="5000" rows="4"></textarea></div><div class="honeypot" aria-hidden="true"><label for="website">Website</label><input id="website" name="website" tabindex="-1" autocomplete="off"></div><label class="consent"><input type="checkbox" name="consent" id="consent" required><span data-i18n="consent">{{consent}}</span></label><p class="form-note"><a href="/{{lang}}/{{privacySlug}}/" data-legal="privacy" data-i18n="privacyLink">{{privacyLink}}</a></p><button class="button button-primary" type="submit"><span data-i18n="submit">{{submit}}</span><span aria-hidden="true">→</span></button><div id="form-response" class="form-response" role="status" aria-live="polite" aria-atomic="true" tabindex="-1" hidden><h3 id="form-response-title"></h3><p id="form-response-message"></p></div></form></div></section>
+  <section id="start" class="hero section-anchor">
+    <figure class="hero-media">
+      <picture>
+        <source media="(max-width:560px)" srcset="/assets/factory-hero-mobile.webp">
+        <img src="/assets/factory-hero.webp" width="1672" height="941" fetchpriority="high" decoding="async" alt="{{facilityAlt}}" data-i18n-alt="facilityAlt">
+      </picture>
+      <figcaption class="factory-caption" data-i18n="conceptCaption">{{conceptCaption}}</figcaption>
+    </figure>
+    <div class="hero-shade" aria-hidden="true"></div>
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <p class="eyebrow" data-i18n="heroEyebrow">{{heroEyebrow}}</p>
+        <h1><span data-i18n="headline1">{{headline1}}</span><span data-i18n="headline2">{{headline2}}</span></h1>
+        <p class="hero-copy" data-i18n="homeCopy">{{homeCopy}}</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#unternehmen"><span data-i18n="learnMore">{{learnMore}}</span><span aria-hidden="true">↗</span></a>
+          <a class="button button-outline" href="#kontakt"><span data-i18n="heroSecondary">{{heroSecondary}}</span><span aria-hidden="true">↗</span></a>
+        </div>
+        <p class="project-status"><span aria-hidden="true"></span><span data-i18n="statusShort">{{statusShort}}</span></p>
+      </div>
+    </div>
+  </section>
+  <section id="unternehmen" class="section section-anchor company-section">
+    <div class="container">
+      <div class="section-heading">
+        <div><p class="eyebrow" data-i18n="aboutEyebrow">{{aboutEyebrow}}</p><h2 data-i18n="aboutTitle">{{aboutTitle}}</h2></div>
+        <div class="prose"><p data-i18n="aboutCopy">{{aboutCopy}}</p><p data-i18n="aboutCopy2">{{aboutCopy2}}</p></div>
+      </div>
+      <ul class="facts">
+        <li><span data-i18n="factLabel1">{{factLabel1}}</span><strong data-i18n="factValue1">{{factValue1}}</strong></li>
+        <li><span data-i18n="factLabel2">{{factLabel2}}</span><strong data-i18n="factValue2">{{factValue2}}</strong></li>
+        <li><span data-i18n="factLabel3">{{factLabel3}}</span><strong data-i18n="factValue3">{{factValue3}}</strong></li>
+      </ul>
+    </div>
+  </section>
+  <section id="technologie" class="section section-anchor approach-section">
+    <div class="container">
+      <div class="section-heading">
+        <div><p class="eyebrow" data-i18n="technologyEyebrow">{{technologyEyebrow}}</p><h2 data-i18n="technologyTitle">{{technologyTitle}}</h2></div>
+        <div class="prose"><p data-i18n="technologyCopy">{{technologyCopy}}</p></div>
+      </div>
+      <div class="process-grid">
+        <article class="process-step"><span class="step-index">01</span><h3 data-i18n="process1">{{process1}}</h3><p data-i18n="processText1">{{processText1}}</p></article>
+        <article class="process-step"><span class="step-index">02</span><h3 data-i18n="process2">{{process2}}</h3><p data-i18n="processText2">{{processText2}}</p></article>
+        <article class="process-step"><span class="step-index">03</span><h3 data-i18n="process3">{{process3}}</h3><p data-i18n="processText3">{{processText3}}</p></article>
+      </div>
+      <div id="nachhaltigkeit" class="resource-row section-anchor"><h3 data-i18n="resourceTitle">{{resourceTitle}}</h3><p data-i18n="resourceText">{{resourceText}}</p></div>
+    </div>
+  </section>
+  <section id="produkte" class="section section-anchor products-section">
+    <div class="container">
+      <div class="products-heading"><div><p class="eyebrow" data-i18n="productEyebrow">{{productEyebrow}}</p><h2 data-i18n="productTitle">{{productTitle}}</h2></div><p class="small-tag" data-i18n="statusShort">{{statusShort}}</p></div>
+      <div class="products-grid">
+        <article class="product-card"><span class="product-number">01</span><div class="product-art"><img src="/assets/planned-larvae.svg" width="320" height="120" loading="lazy" alt=""></div><h3 data-i18n="product1">{{product1}}</h3><p data-i18n="productText1">{{productText1}}</p></article>
+        <article class="product-card"><span class="product-number">02</span><div class="product-art"><img src="/assets/planned-frass.svg" width="300" height="120" loading="lazy" alt=""></div><h3 data-i18n="product2">{{product2}}</h3><p data-i18n="productText2">{{productText2}}</p></article>
+      </div>
+      <p class="product-note" data-i18n="productNote">{{productNote}}</p>
+    </div>
+  </section>
+  <section id="investoren" class="section section-anchor partners-section">
+    <div class="container section-heading">
+      <div><p class="eyebrow" data-i18n="investorEyebrow">{{investorEyebrow}}</p><h2 data-i18n="investorTitle">{{investorTitle}}</h2></div>
+      <div><div class="prose"><p data-i18n="investorCopy">{{investorCopy}}</p><p data-i18n="investorCopy2">{{investorCopy2}}</p></div><a class="button button-primary" href="#kontakt" data-interest="investment"><span data-i18n="investorCta">{{investorCta}}</span><span aria-hidden="true">↗</span></a></div>
+    </div>
+  </section>
+  <section id="kontakt" class="section section-anchor contact-section">
+    <div class="container contact-grid">
+      <div class="contact-copy">
+        <p class="eyebrow" data-i18n="contactEyebrow">{{contactEyebrow}}</p>
+        <h2 data-i18n="contactTitle">{{contactTitle}}</h2>
+        <p class="prose" data-i18n="contactIntro">{{contactIntro}}</p>
+        <div class="contact-details">
+          <p class="company-name">FLYWEISS DOO SOMBOR</p><p data-i18n="location">{{location}}</p>
+          <a class="email-address" href="mailto:office@flyweiss.com">office@flyweiss.com</a>
+          <div class="contact-actions">
+            <a class="button button-primary" href="mailto:office@flyweiss.com"><span data-i18n="emailCta">{{emailCta}}</span><span aria-hidden="true">↗</span></a>
+            <button class="copy-button" type="button" data-copy-email><span data-i18n="copyEmail">{{copyEmail}}</span></button>
+          </div>
+          <p class="email-hint" data-i18n="emailHint">{{emailHint}}</p>
+          <p class="copy-status" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+      {{CONTACT_FORM}}
+    </div>
+  </section>
 </main>
-<footer class="site-footer"><div class="container footer-top"><a class="brand" href="#start" aria-label="{{brandLabel}}" data-i18n-aria="brandLabel"><img src="/assets/flyweiss-logo-white.svg" width="225" height="58" loading="lazy" alt="FLYWEISS · PROTEIN • FUTURE"></a><p><span class="live-dot" aria-hidden="true"></span><span data-i18n="statusShort">{{statusShort}}</span></p><a class="back-to-top" href="#start"><span data-i18n="backToTop">{{backToTop}}</span><span aria-hidden="true">↑</span></a></div><div class="container footer-bottom"><span>© <span id="year">2026</span> FLYWEISS DOO SOMBOR</span><div><a href="/{{lang}}/{{legalSlug}}/" data-legal="legal" data-i18n="legalLink">{{legalLink}}</a><a href="/{{lang}}/{{privacySlug}}/" data-legal="privacy" data-i18n="privacyLink">{{privacyLink}}</a></div></div></footer>
-</body></html>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top"><div><a class="brand" href="#start" aria-label="{{brandLabel}}" data-i18n-aria="brandLabel"><img src="/assets/flyweiss-logo-white.svg" width="200" height="55" loading="lazy" alt="FLYWEISS · PROTEIN • FUTURE"></a><p data-i18n="footerLine">{{footerLine}}</p></div><a class="back-to-top" href="#start"><span data-i18n="backToTop">{{backToTop}}</span><span aria-hidden="true">↑</span></a></div>
+    <div class="footer-bottom"><span>© 2026 FLYWEISS DOO SOMBOR</span><div><a href="/{{lang}}/{{legalSlug}}/" data-legal="legal" data-i18n="legalLink">{{legalLink}}</a><a href="/{{lang}}/{{privacySlug}}/" data-legal="privacy" data-i18n="privacyLink">{{privacyLink}}</a></div></div>
+  </div>
+</footer>
+</body>
+</html>

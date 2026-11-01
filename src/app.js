@@ -6,7 +6,12 @@ const mobileNav = document.querySelector('#mobile-nav');
 const contactForm = document.querySelector('#contact-form');
 const formResponse = document.querySelector('#form-response');
 let formState = 'idle';
+let copyState = null;
 const slugs = {de:{legal:'impressum',privacy:'datenschutz'},en:{legal:'legal-notice',privacy:'privacy'}};
+const localePath = language => language === 'en' ? '/en/' : '/';
+function renderCopyState() {
+  document.querySelector('.copy-status').textContent = copyState ? CONTENT[lang][copyState] : '';
+}
 function setMenu(open) {
   mobileNav.hidden = !open;
   menuButton.setAttribute('aria-expanded', String(open));
@@ -35,19 +40,23 @@ function setLanguage(next, updateUrl = true) {
   document.documentElement.lang = lang;
   document.title = t.title;
   document.querySelector('meta[name="description"]').content = t.metaDescription;
-  document.querySelector('link[rel="canonical"]').href = `https://www.flyweiss.com/${lang}/`;
+  document.querySelector('link[rel="canonical"]').href = `https://www.flyweiss.com${localePath(lang)}`;
+  document.querySelector('meta[property="og:title"]').content = t.title;
+  document.querySelector('meta[property="og:description"]').content = t.metaDescription;
+  document.querySelector('meta[property="og:url"]').content = `https://www.flyweiss.com${localePath(lang)}`;
   document.querySelectorAll('[data-i18n]').forEach(el => { el.textContent = t[el.dataset.i18n]; });
   for (const [attr, dataset] of [['aria-label','i18nAria'],['placeholder','i18nPlaceholder'],['alt','i18nAlt']]) {
     document.querySelectorAll(`[data-${dataset.replace(/[A-Z]/g,m=>'-'+m.toLowerCase())}]`).forEach(el => el.setAttribute(attr, t[el.dataset[dataset]]));
   }
   document.querySelectorAll('[data-lang]').forEach(link => {
     if(link.dataset.lang === lang) link.setAttribute('aria-current','true'); else link.removeAttribute('aria-current');
-    link.href = `/${link.dataset.lang}/${location.hash}`;
+    link.href = `${localePath(link.dataset.lang)}${location.hash}`;
   });
   document.querySelectorAll('[data-legal]').forEach(link => link.href = `/${lang}/${slugs[lang][link.dataset.legal]}/`);
   setMenu(false);
   renderFormState();
-  if (updateUrl) history.pushState(null,'',`/${lang}/${location.hash}`);
+  renderCopyState();
+  if (updateUrl) history.pushState(null,'',`${localePath(lang)}${location.hash}`);
 }
 const queryLang = new URLSearchParams(location.search).get('lang');
 setLanguage(queryLang || lang, Boolean(queryLang));
@@ -60,7 +69,16 @@ menuButton.addEventListener('click', () => setMenu(mobileNav.hidden));
 mobileNav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenu(false)));
 document.addEventListener('keydown', event => {if(event.key === 'Escape' && !mobileNav.hidden) {setMenu(false); menuButton.focus();}});
 document.addEventListener('click', event => {if(!event.target.closest('.site-header')) setMenu(false);});
-matchMedia('(min-width: 1200px)').addEventListener('change', event => {if(event.matches) setMenu(false);});
+matchMedia('(min-width: 1041px)').addEventListener('change', event => {if(event.matches) setMenu(false);});
+document.querySelector('[data-copy-email]').addEventListener('click', async () => {
+  try {
+    await navigator.clipboard.writeText('office@flyweiss.com');
+    copyState = 'copied';
+  } catch {
+    copyState = 'copyFail';
+  }
+  renderCopyState();
+});
 document.querySelectorAll('[data-interest]').forEach(link => link.addEventListener('click', () => {document.querySelector('#interest').value = link.dataset.interest;}));
 const navLinks = document.querySelectorAll('.desktop-nav a, .mobile-nav a');
 const sections = [...document.querySelectorAll('main>section[id]')];

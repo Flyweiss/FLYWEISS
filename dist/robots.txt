@@ -1,3 +1,3 @@
 User-agent: *
 Disallow: /
-# Local review build. Indexing requires FLYWEISS approval.
+# Indexing remains disabled while company and legal details are reviewed.
