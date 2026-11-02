@@ -1,0 +1,58 @@
+{
+  "date": "2026-11-02",
+  "scope": "local only",
+  "head": "f607646d9c8decdf99ef67265ddc4ad93dd45f8f",
+  "build": "passed",
+  "staticVerification": "passed",
+  "translationsPerLanguage": 136,
+  "responsiveViews": 14,
+  "widths": [
+    320,
+    390,
+    560,
+    768,
+    1024,
+    1440,
+    1920
+  ],
+  "languages": [
+    "de",
+    "en"
+  ],
+  "checks": [
+    "flexible production locations",
+    "registered office distinguished",
+    "registered company and address preserved",
+    "contract section immediately follows hero",
+    "five company facts",
+    "research caveats retained",
+    "navigation",
+    "investor interest preselection",
+    "email copying and fallback",
+    "four legal routes"
+  ],
+  "formChecks": [
+    "required fields",
+    "consent",
+    "honeypot",
+    "payload",
+    "duplicate-submit lock",
+    "language switch during submit",
+    "confirmed success",
+    "API rejection",
+    "server error",
+    "rate limit",
+    "network failure",
+    "input preservation",
+    "mobile layout"
+  ],
+  "interceptedFormRequests": 6,
+  "realEmailsSent": 0,
+  "unexpectedRuntimeErrors": [],
+  "expectedMockErrors": [
+    "HTTP 500",
+    "HTTP 429",
+    "network failure"
+  ],
+  "published": false
+}

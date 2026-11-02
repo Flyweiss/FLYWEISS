@@ -37,7 +37,7 @@ Pratiti posao do `SUCCEED`, zatim proveriti aktivni domen i uporediti objavljene
 
 Izgled i javni tekstovi prate klijentski paket od 01.11.2026: tamno zaglavlje, veliki fabrički motiv i sekcije kompanija, proizvodni pristup, planirani proizvodi, partnerstva i kontakt. Na telefonu slika prethodi tekstu. Logo prati postojeću referencu sa larvom i sloganom PROTEIN • FUTURE. Prethodni izvor je sačuvan u Git istoriji.
 
-Lokacija i fabrička zgrada opisane su kao postojeće, a početak proizvodnje je u pripremi. Rok od deset godina za dobavljanje i otkup korisnik je izričito potvrdio za javnu objavu; tekst zadržava pripisivanje upravi. Energetska nezavisnost ostaje cilj. Nisu dodati finansijski iznosi, kapaciteti ili tehnički parametri.
+Proizvodna lokacija ostaje otvorena: više odgovarajućih lokacija i proizvodnih prostora u Srbiji je u izboru. Sombor se navodi samo kao registrovano sedište; pravno ime FLYWEISS DOO SOMBOR i registarska adresa nisu menjani. Rok od deset godina za dobavljanje i otkup korisnik je izričito potvrdio za javnu objavu; tekst zadržava pripisivanje projektnoj kompaniji i obuhvat ugovorenih proizvoda i količina. Energetska nezavisnost ostaje cilj. Nisu dodati kapaciteti ili tehnički parametri.
 
 `factory-hero.webp` i `factory-hero-mobile.webp` su dostavljene varijante konceptualne slike sa vidljivom HTML oznakom. Ilustracije larvi i frasa prenete su iz klijentovog koda kao SVG. Nema automatskog videa, slajdera, animacija, analitike, mapa ili eksternih fontova.
 
@@ -66,3 +66,17 @@ Privatnost opisuje stvarnu formu, Web3Forms, Shipvela hosting i e-poštu. Nije p
 Build, check i sintaksa generisanog JavaScript-a prolaze. `refresh-checks.js` proverava oba jezika na širinama 320, 390, 560, 768, 1024, 1440 i 1920 px, položaj slike i oznake, overflow, navigaciju, kopiranje sa uspehom i greškom, metapodatke, partnerski CTA i četiri pravne rute. Nema JavaScript runtime grešaka.
 
 `contact-flow.js` proverava obavezna polja, saglasnost, honeypot, payload, dupli zahtev, promenu jezika tokom slanja, uspeh, API odbijanje, HTTP 500/429, mrežnu grešku i očuvanje unosa. Regresione provere simuliraju odgovore i ne šalju dodatne mejlove.
+
+## Dopuna po završnom brifu
+
+Najnoviji paket za Stefana dopunjuje raniju predaju. Primenjeni su novi DE/EN naslov i uvod iz aktuelnih tekstova, investitorski CTA, posebna investiciona sekcija, uslovno formulisana ciljana podrška od oko 60% prihvatljivih investicionih troškova, planirana automatizacija sa navođenjem Reploid-a i dopunjen infrastrukturni doprinos, uključujući hlađenje.
+
+Paket FLYWEISS_STEFAN_STANDORTFLEXIBEL_FINAL-1 ima prednost nad starijim protivrečnim tekstovima. U oba jezika i metapodacima uklonjeno je predstavljanje Sombora kao utvrđene proizvodne lokacije. Blok o desetogodišnjem otkupu i snabdevanju nalazi se odmah ispod uvodnog motiva. Kompanijski tekst i pet sažetih činjenica obuhvataju izbor lokacije, otkup, jaja larvi, hranu i tehničko rukovodstvo.
+
+Uz proizvode su dodate biološke karakteristike, moguća primena u hrani za životinje uz odgovarajuće uslove i odobrenja, kao i razvojni potencijal proteinskih frakcija, sastojaka povezanih sa kolagenom i lepkova. Kolagen i lepkovi nisu predstavljeni kao dostupni proizvodi; zadržani su klijentski uslovi tehničke i komercijalne provere. Ispravljene su očigledne greške u nemačkoj interpunkciji i engleskom prevodu; izvorni klijentski fajlovi nisu menjani.
+
+Podrška nije predstavljena kao odobrena; planirana automatizacija i atribucija Reploid-u prate klijentski paket. Nezavisna potvrda statusa podsticaja, ugovornih detalja ili prava na ime nije deo tehničke provere sajta. Ranije korisničko odobrenje za desetogodišnji rok ostaje zabeleženo. Izvorne slike i logo nisu zamenjeni jer su identični prethodnom paketu.
+
+Dopuna je prvobitno pripremljena i proverena samo lokalno. Korisnik je 02.11.2026. izričito odobrio push na main i objavu ove verzije na postojećem javnom sajtu kroz zakazani zadatak. DNS, hosting i indeksiranje ostaju nepromenjeni. Provere forme koriste simulirane odgovore, bez stvarnih test poruka.
+
+Provera dopune 02.11.2026: build, statička provera 136 prevoda po jeziku i JavaScript sintaksa prolaze. `location-flexible-checks.js` proverava 14 responzivnih prikaza, redosled ugovornog bloka, pet činjenica, fleksibilne lokacije, kontakt i četiri pravne rute. `location-flexible-form-checks.js` proverava formu sa šest presretnutih zahteva i simuliranim odgovorima, bez stvarnih mejlova. Rezultat je u `output/playwright/location-flexible-results.json`. Lokalni pregled za ovaj zadatak radi na `http://localhost:4177/`.

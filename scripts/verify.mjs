@@ -4,10 +4,27 @@ import { resolve } from 'node:path';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const content = JSON.parse(await readFile(resolve(root,'src/content.json'),'utf8'));
-const approved = JSON.parse(await readFile(resolve(root,'src/brief-copy.json'),'utf8')).copy;
+const brief = JSON.parse(await readFile(resolve(root,'src/brief-copy.json'),'utf8'));
+const approved = brief.copy;
 for (const lang of ['de','en']) {
+  for (const [key,value] of Object.entries(content[lang])) {
+    if (/sombor/i.test(value) && !['location','privacyController'].includes(key)) throw new Error('Registered office used as a fixed production site: ' + lang + '/' + key);
+    if (lang === 'en' && /\bSerbien\b/.test(value)) throw new Error('Untranslated country name: ' + key);
+  }
   for (const [key,exact] of Object.entries(approved[lang])) {
     if (content[lang][key] !== exact) throw new Error('Copy differs from client handoff: ' + lang + '/' + key);
+  }
+  if (brief.core) {
+    const actual = {
+      headline:content[lang].headline1 + ' ' + content[lang].headline2,
+      sub:content[lang].homeCopy,
+      cta:content[lang].learnMore + ' | ' + content[lang].heroSecondary,
+      invest:content[lang].investmentCopy,
+      subsidy:content[lang].fundingCopy
+    };
+    for (const [key,exact] of Object.entries(brief.core[lang])) {
+      if (actual[key] !== exact) throw new Error('Latest core text differs: ' + lang + '/' + key);
+    }
   }
 }
 if (JSON.stringify(Object.keys(content.de).sort()) !== JSON.stringify(Object.keys(content.en).sort())) throw new Error('Language keys differ');
@@ -29,9 +46,11 @@ for (const lang of ['de','en']) {
   for (const match of html.matchAll(/data-i18n(?:-aria|-placeholder|-alt)?="([\w]+)"/g)) {
     if (!content[lang][match[1]]) throw new Error('Missing ' + lang + ' translation: ' + match[1]);
   }
-  for (const id of ['start','unternehmen','technologie','produkte','nachhaltigkeit','investoren','kontakt','contact-form']) {
+  for (const id of ['start','contracted-offtake','unternehmen','technologie','produkte','additional-value','nachhaltigkeit','investition','investoren','kontakt','contact-form']) {
     if (!html.includes('id="' + id + '"')) throw new Error('Missing section or form: ' + id);
   }
+  if (!/<\/section>\s*<section id="contracted-offtake"/.test(html.slice(html.indexOf('id="start"'), html.indexOf('id="unternehmen"')))) throw new Error('Contract section must immediately follow hero');
+  if ((html.match(/<li><span data-i18n="factLabel/g) || []).length !== 5) throw new Error('Company facts are incomplete');
   if (!html.includes('lang="' + lang + '"') || !html.includes(content[lang].homeCopy)) throw new Error('Language not prerendered');
   if (!html.includes('mailto:office@flyweiss.com')) throw new Error('Office email missing');
   if (!html.includes('https://api.web3forms.com/submit')) throw new Error('Contact form endpoint missing');
@@ -41,6 +60,7 @@ await verifyPage('index.html');
 for (const route of ['de/impressum','de/datenschutz','en/legal-notice','en/privacy']) {
   const html = await verifyPage(route + '/index.html');
   if (!html.includes('class="legal-main"')) throw new Error('Missing legal content');
+  if (!html.includes('FLYWEISS DOO SOMBOR') || !html.includes('Josićki put 85')) throw new Error('Registered company details changed: ' + route);
   if (!html.includes('rel="canonical" href="https://www.flyweiss.com/' + route + '/"')) throw new Error('Incorrect legal canonical: ' + route);
 }
 async function auditPublicFiles(directory) {
