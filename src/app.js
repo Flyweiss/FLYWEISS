@@ -53,6 +53,8 @@ function setLanguage(next, updateUrl = true) {
     link.href = `${localePath(link.dataset.lang)}${location.hash}`;
   });
   document.querySelectorAll('[data-legal]').forEach(link => link.href = `/${lang}/${slugs[lang][link.dataset.legal]}/`);
+  document.querySelectorAll('[data-i18n-src]').forEach(image => image.src = t[image.dataset.i18nSrc]);
+  document.querySelectorAll('[data-i18n-href]').forEach(link => link.href = t[link.dataset.i18nHref]);
   setMenu(false);
   renderFormState();
   renderCopyState();
@@ -153,3 +155,13 @@ contactForm.addEventListener('input', () => {
   formState = 'idle';
   renderFormState();
 });
+
+const disclosures = [...document.querySelectorAll('#details .accordion details')];
+document.querySelector('[data-open-all]').addEventListener('click', () => disclosures.forEach(detail => { detail.open = true; }));
+document.querySelector('[data-close-all]').addEventListener('click', () => disclosures.forEach(detail => { detail.open = false; }));
+function revealLinkedDetail() {
+  const target = document.getElementById(location.hash.slice(1));
+  if (disclosures.includes(target)) target.open = true;
+}
+window.addEventListener('hashchange', revealLinkedDetail);
+revealLinkedDetail();

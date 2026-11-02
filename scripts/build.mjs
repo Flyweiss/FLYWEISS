@@ -21,10 +21,12 @@ await rm(dist, {recursive:true,force:true});
 await mkdir(resolve(dist, 'assets'), {recursive:true});
 const assetNames = [
   'factory-hero.webp','factory-hero-mobile.webp','planned-larvae.svg','planned-frass.svg',
-  'flyweiss-logo-white.svg','favicon.svg','favicon.png','favicon.ico','apple-touch-icon.png'
+  'flyweiss-logo-white.svg','favicon.svg','favicon.png','favicon.ico','apple-touch-icon.png',
+  'flyweiss-logo-transparent.webp','investment-concept-de.webp','investment-concept-en.webp'
 ];
 for (const name of assetNames) await cp(resolve(root,'src/assets',name),resolve(dist,'assets',name));
 await cp(resolve(root, 'src/styles.css'), resolve(dist, 'styles.css'));
+await cp(resolve(root, 'src/protein-future.css'), resolve(dist, 'protein-future.css'));
 const app = (await readFile(resolve(root, 'src/app.js'), 'utf8')).replace('__CONTENT__', JSON.stringify(content));
 await writeFile(resolve(dist, 'app.js'), app);
 await writeFile(resolve(dist, 'index.html'), render(template, 'de'));

@@ -20,134 +20,258 @@
 <link rel="icon" href="/assets/favicon.ico" sizes="16x16 32x32 48x48 64x64 128x128 256x256">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="stylesheet" href="/styles.css">
+<link rel="stylesheet" href="/protein-future.css">
 <script src="/app.js" defer></script>
 </head>
-<body>
+<body class="protein-future">
 <a class="skip-link" href="#main" data-i18n="skip">{{skip}}</a>
 <header class="site-header">
   <div class="container header-inner">
-    <a class="brand" href="#start" aria-label="{{brandLabel}}" data-i18n-aria="brandLabel"><img src="/assets/flyweiss-logo-white.svg" width="200" height="55" alt="FLYWEISS · PROTEIN • FUTURE"></a>
-    <nav class="desktop-nav" aria-label="{{navigation}}" data-i18n-aria="navigation">
-      <a href="#unternehmen" data-i18n="navAbout">{{navAbout}}</a>
-      <a href="#technologie" data-i18n="navTechnology">{{navTechnology}}</a>
-      <a href="#produkte" data-i18n="navProducts">{{navProducts}}</a>
-      <a href="#investition" data-i18n="navInvestment">{{navInvestment}}</a>
-      <a href="#investoren" data-i18n="navInvestors">{{navInvestors}}</a>
-    </nav>
+    <a class="brand" href="#start" aria-label="{{brandLabel}}" data-i18n-aria="brandLabel"><img src="/assets/flyweiss-logo-transparent.webp" width="200" height="55" alt="FLYWEISS · PROTEIN • FUTURE"></a>
+    <nav class="desktop-nav" aria-label="{{navigation}}" data-i18n-aria="navigation"><a href="#start" data-i18n="navHome">{{navHome}}</a><a href="#vorteile" data-i18n="navBenefits">{{navBenefits}}</a><a href="#details" data-i18n="navDetails">{{navDetails}}</a></nav>
     <div class="header-controls">
       <div class="language-switch" aria-label="{{languageLabel}}" data-i18n-aria="languageLabel">
         <a href="/" data-lang="de" lang="de" hreflang="de" aria-label="Deutsch">DE</a>
         <a href="/en/" data-lang="en" lang="en" hreflang="en" aria-label="English">EN</a>
       </div>
-      <a class="button header-cta" href="#kontakt"><span data-i18n="navContact">{{navContact}}</span><span aria-hidden="true">↗</span></a>
+      <a class="button header-cta" href="#kontakt" data-interest="investment"><span data-i18n="navContact">{{navContact}}</span><span aria-hidden="true">↗</span></a>
       <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="{{openMenu}}"><span></span><span></span></button>
     </div>
   </div>
-  <nav id="mobile-nav" class="mobile-nav" hidden aria-label="{{navigation}}" data-i18n-aria="navigation">
-    <a href="#unternehmen" data-i18n="navAbout">{{navAbout}}</a>
-    <a href="#technologie" data-i18n="navTechnology">{{navTechnology}}</a>
-    <a href="#produkte" data-i18n="navProducts">{{navProducts}}</a>
-    <a href="#investition" data-i18n="navInvestment">{{navInvestment}}</a>
-    <a href="#investoren" data-i18n="navInvestors">{{navInvestors}}</a>
-    <a href="#kontakt" data-i18n="navContact">{{navContact}}</a>
-  </nav>
+  <nav id="mobile-nav" class="mobile-nav" hidden aria-label="{{navigation}}" data-i18n-aria="navigation"><a href="#start" data-i18n="navHome">{{navHome}}</a><a href="#vorteile" data-i18n="navBenefits">{{navBenefits}}</a><a href="#details" data-i18n="navDetails">{{navDetails}}</a><a href="#kontakt" data-interest="investment" data-i18n="navContact">{{navContact}}</a></nav>
 </header>
 <main id="main">
-  <section id="start" class="hero section-anchor">
-    <figure class="hero-media">
-      <picture>
-        <source media="(max-width:560px)" srcset="/assets/factory-hero-mobile.webp">
-        <img src="/assets/factory-hero.webp" width="1672" height="941" fetchpriority="high" decoding="async" alt="{{facilityAlt}}" data-i18n-alt="facilityAlt">
-      </picture>
-      <figcaption class="factory-caption" data-i18n="conceptCaption">{{conceptCaption}}</figcaption>
-    </figure>
-    <div class="hero-shade" aria-hidden="true"></div>
-    <div class="container hero-inner">
-      <div class="hero-content">
-        <h1><span class="hero-wordmark" data-i18n="headline1">{{headline1}}</span><span data-i18n="headline2">{{headline2}}</span></h1>
-        <p class="hero-copy" data-i18n="homeCopy">{{homeCopy}}</p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#unternehmen"><span data-i18n="learnMore">{{learnMore}}</span><span aria-hidden="true">↗</span></a>
-          <a class="button button-outline" href="#kontakt" data-interest="investment"><span data-i18n="heroSecondary">{{heroSecondary}}</span><span aria-hidden="true">↗</span></a>
-        </div>
-        <p class="project-status"><span aria-hidden="true"></span><span data-i18n="statusShort">{{statusShort}}</span></p>
-      </div>
-    </div>
-  </section>
-  <section id="contracted-offtake" class="section section-anchor contract-section">
-    <div class="container section-heading">
-      <div><p class="eyebrow" data-i18n="contractEyebrow">{{contractEyebrow}}</p><h2 data-i18n="contractTitle">{{contractTitle}}</h2></div>
-      <div class="prose"><p data-i18n="contractCopy">{{contractCopy}}</p><a class="button button-primary" href="#kontakt" data-interest="investment"><span data-i18n="heroSecondary">{{heroSecondary}}</span><span aria-hidden="true">↗</span></a></div>
-    </div>
-  </section>
-  <section id="unternehmen" class="section section-anchor company-section">
-    <div class="container">
-      <div class="section-heading">
-        <div><p class="eyebrow" data-i18n="aboutEyebrow">{{aboutEyebrow}}</p><h2 data-i18n="aboutTitle">{{aboutTitle}}</h2></div>
-        <div class="prose"><p data-i18n="aboutCopy">{{aboutCopy}}</p><p data-i18n="aboutCopy2">{{aboutCopy2}}</p><p data-i18n="aboutCopy3">{{aboutCopy3}}</p></div>
-      </div>
-      <ul class="facts">
-        <li><span data-i18n="factLabel1">{{factLabel1}}</span><strong data-i18n="factValue1">{{factValue1}}</strong></li>
-        <li><span data-i18n="factLabel2">{{factLabel2}}</span><strong data-i18n="factValue2">{{factValue2}}</strong></li>
-        <li><span data-i18n="factLabel3">{{factLabel3}}</span><strong data-i18n="factValue3">{{factValue3}}</strong></li>
-        <li><span data-i18n="factLabel4">{{factLabel4}}</span><strong data-i18n="factValue4">{{factValue4}}</strong></li>
-        <li><span data-i18n="factLabel5">{{factLabel5}}</span><strong data-i18n="factValue5">{{factValue5}}</strong></li>
-      </ul>
-    </div>
-  </section>
-  <section id="technologie" class="section section-anchor approach-section">
-    <div class="container">
-      <div class="section-heading">
-        <div><p class="eyebrow" data-i18n="technologyEyebrow">{{technologyEyebrow}}</p><h2 data-i18n="technologyTitle">{{technologyTitle}}</h2></div>
-        <div class="prose"><p data-i18n="technologyCopy">{{technologyCopy}}</p></div>
-      </div>
-      <div class="automation-overview"><h3 data-i18n="automationTitle">{{automationTitle}}</h3><p data-i18n="automationCopy">{{automationCopy}}</p></div>
-      <div class="process-grid">
-        <article class="process-step"><span class="step-index">01</span><h3 data-i18n="process1">{{process1}}</h3><p data-i18n="processText1">{{processText1}}</p></article>
-        <article class="process-step"><span class="step-index">02</span><h3 data-i18n="process2">{{process2}}</h3><p data-i18n="processText2">{{processText2}}</p></article>
-        <article class="process-step"><span class="step-index">03</span><h3 data-i18n="process3">{{process3}}</h3><p data-i18n="processText3">{{processText3}}</p></article>
-      </div>
-      <div id="nachhaltigkeit" class="resource-row section-anchor"><h3 data-i18n="resourceTitle">{{resourceTitle}}</h3><p data-i18n="resourceText">{{resourceText}}</p></div>
-    </div>
-  </section>
-  <section id="produkte" class="section section-anchor products-section">
-    <div class="container">
-      <div class="products-heading"><div><p class="eyebrow" data-i18n="productEyebrow">{{productEyebrow}}</p><h2 data-i18n="productTitle">{{productTitle}}</h2></div><p class="small-tag" data-i18n="statusShort">{{statusShort}}</p></div>
-      <div class="products-grid">
-        <article class="product-card"><span class="product-number">01</span><div class="product-art"><img src="/assets/planned-larvae.svg" width="320" height="120" loading="lazy" alt=""></div><h3 data-i18n="product1">{{product1}}</h3><p data-i18n="productText1">{{productText1}}</p></article>
-        <article class="product-card"><span class="product-number">02</span><div class="product-art"><img src="/assets/planned-frass.svg" width="300" height="120" loading="lazy" alt=""></div><h3 data-i18n="product2">{{product2}}</h3><p data-i18n="productText2">{{productText2}}</p></article>
-      </div>
-      <p class="product-note" data-i18n="productNote">{{productNote}}</p>
-      <div id="additional-value" class="additional-value section-anchor">
-        <h3 data-i18n="valueTitle">{{valueTitle}}</h3>
-        <div class="value-grid">
-          <article class="value-card"><h4 data-i18n="biologyTitle">{{biologyTitle}}</h4><p data-i18n="biologyCopy">{{biologyCopy}}</p></article>
-          <article class="value-card"><h4 data-i18n="feedTitle">{{feedTitle}}</h4><p data-i18n="feedCopy">{{feedCopy}}</p></article>
-          <article class="value-card research-card"><h4 data-i18n="researchTitle">{{researchTitle}}</h4><p data-i18n="researchCopy">{{researchCopy}}</p></article>
+  <section class="hero" id="start">
+    <picture class="hero-media">
+      <source media="(max-width: 600px)" srcset="/assets/factory-hero-mobile.webp">
+      <img alt="{{facilityAlt}}" fetchpriority="high" loading="eager" src="/assets/factory-hero.webp" data-i18n-alt="facilityAlt" width="1672" height="941">
+    </picture>
+    <div class="hero-shade"></div>
+    <div class="wrap hero-inner">
+      <div class="hero-copy">
+        <div class="eyebrow" data-i18n="heroEyebrow">{{heroEyebrow}}</div>
+        <h1 class="hero-wordmark">
+          <span class="wordmark-fly">FLY</span>
+          <span class="wordmark-weiss">WEISS</span>
+        </h1>
+        <p class="hero-subline">Protein Future</p>
+        <p class="hero-tagline" data-i18n="heroTagline">{{heroTagline}}</p>
+        <p class="lead" data-i18n="homeCopy">{{homeCopy}}</p>
+        <div class="buttons">
+          <a class="btn btn-primary" href="#kontakt" data-interest="investment" data-i18n="heroPrimary">{{heroPrimary}}</a>
+          <a class="btn btn-secondary" href="#vorteile" data-i18n="learnMore">{{learnMore}}</a>
         </div>
       </div>
     </div>
+    <span class="factory-note factory-caption" data-i18n="conceptCaption">{{conceptCaption}}</span>
   </section>
-  <section id="investition" class="section section-anchor investment-section">
-    <div class="container">
-      <div class="section-heading">
-        <div><p class="eyebrow" data-i18n="investmentEyebrow">{{investmentEyebrow}}</p><h2 data-i18n="investmentTitle">{{investmentTitle}}</h2></div>
-        <div class="prose"><p data-i18n="investmentCopy">{{investmentCopy}}</p></div>
+  <section class="trust" id="contracted-offtake">
+    <div class="wrap trust-grid">
+      <div class="trust-item">
+        <strong data-i18n="trustTitle1">{{trustTitle1}}</strong>
+        <span data-i18n="trustCopy1">{{trustCopy1}}</span>
       </div>
-      <ul class="investment-points">
-        <li data-i18n="investmentPoint1">{{investmentPoint1}}</li>
-        <li data-i18n="investmentPoint2">{{investmentPoint2}}</li>
-        <li data-i18n="investmentPoint3">{{investmentPoint3}}</li>
-        <li data-i18n="investmentPoint4">{{investmentPoint4}}</li>
-      </ul>
-      <div class="funding-note"><h3 data-i18n="fundingTitle">{{fundingTitle}}</h3><p data-i18n="fundingCopy">{{fundingCopy}}</p></div>
-      <div class="investment-contact"><p class="prose" data-i18n="investmentConfidentiality">{{investmentConfidentiality}}</p><a class="button button-primary" href="#kontakt" data-interest="investment"><span data-i18n="heroSecondary">{{heroSecondary}}</span><span aria-hidden="true">↗</span></a></div>
+      <div class="trust-item">
+        <strong data-i18n="trustTitle2">{{trustTitle2}}</strong>
+        <span data-i18n="trustCopy2">{{trustCopy2}}</span>
+      </div>
+      <div class="trust-item">
+        <strong data-i18n="trustTitle3">{{trustTitle3}}</strong>
+        <span data-i18n="trustCopy3">{{trustCopy3}}</span>
+      </div>
     </div>
   </section>
-  <section id="investoren" class="section section-anchor partners-section">
-    <div class="container section-heading">
-      <div><p class="eyebrow" data-i18n="investorEyebrow">{{investorEyebrow}}</p><h2 data-i18n="investorTitle">{{investorTitle}}</h2></div>
-      <div><div class="prose"><p data-i18n="investorCopy">{{investorCopy}}</p><p data-i18n="investorCopy2">{{investorCopy2}}</p></div><a class="button button-primary" href="#kontakt" data-interest="investment"><span data-i18n="investorCta">{{investorCta}}</span><span aria-hidden="true">↗</span></a></div>
+  <section class="section" id="vorteile">
+    <div class="wrap">
+      <p class="kicker section-label" data-i18n="opportunityEyebrow">{{opportunityEyebrow}}</p>
+      <h2 data-i18n="opportunityTitle">{{opportunityTitle}}</h2>
+      <p class="section-desc" data-i18n="opportunityCopy">{{opportunityCopy}}</p>
+      <div class="insight-grid">
+        <article class="insight">
+          <span class="num">01</span>
+          <h3 data-i18n="insightTitle1">{{insightTitle1}}</h3>
+          <p data-i18n="insightCopy1">{{insightCopy1}}</p>
+        </article>
+        <article class="insight">
+          <span class="num">02</span>
+          <h3 data-i18n="insightTitle2">{{insightTitle2}}</h3>
+          <p data-i18n="insightCopy2">{{insightCopy2}}</p>
+        </article>
+        <article class="insight">
+          <span class="num">03</span>
+          <h3 data-i18n="insightTitle3">{{insightTitle3}}</h3>
+          <p data-i18n="insightCopy3">{{insightCopy3}}</p>
+        </article>
+      </div>
+    </div>
+  </section>
+  <section class="market-section" id="markt">
+    <div class="wrap market-grid">
+      <div class="market-copy">
+        <p class="kicker" data-i18n="marketEyebrow">{{marketEyebrow}}</p>
+        <h2 data-i18n="marketTitle">{{marketTitle}}</h2>
+        <p data-i18n="marketCopy">{{marketCopy}}</p>
+      </div>
+      <div aria-label="{{marketSource}}" class="market-art" role="group" data-i18n-aria="marketSource">
+        <div class="market-number" data-i18n="marketNumber">{{marketNumber}}</div>
+        <svg aria-label="{{marketSource}}" role="img" viewBox="0 0 520 235" data-i18n-aria="marketSource">
+          <g opacity=".16" stroke="#e4f8d3" stroke-width="1">
+            <path d="M15 48 H500 M15 97 H500 M15 146 H500 M15 195 H500"></path>
+          </g>
+          <path d="M20 190 C105 180 175 169 238 137 S386 99 465 45" fill="none" stroke="#c3ee7a" stroke-linecap="round" stroke-width="8"></path>
+          <path d="M430 43 L470 40 L458 79" fill="none" stroke="#c3ee7a" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"></path>
+          <circle cx="24" cy="189" fill="#f1ffe0" r="7"></circle>
+          <circle cx="463" cy="47" fill="#f1ffe0" r="7"></circle>
+        </svg>
+        <div class="market-period">
+          <span>2022–2024</span>
+          <span>2034</span>
+        </div>
+        <p class="market-source">
+          <span data-i18n="marketSource">{{marketSource}}</span>
+          <br>
+          <span data-i18n="marketDiagramNote">{{marketDiagramNote}}</span>
+          <br>
+          <a href="https://www.oecd.org/en/publications/oecd-fao-agricultural-outlook-2025-2034_601276cd-en/full-report/agricultural-and-food-markets-trends-and-prospects_d3812d71.html" rel="noopener noreferrer" target="_blank" data-i18n="marketSourceLink">{{marketSourceLink}}</a>
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="bank-visual-section" id="investmentvergleich">
+    <div class="wrap">
+      <div class="bank-visual-head">
+        <div>
+          <p class="kicker" data-i18n="bankEyebrow">{{bankEyebrow}}</p>
+          <h2 data-i18n="bankTitle">{{bankTitle}}</h2>
+          <p data-i18n="bankCopy">{{bankCopy}}</p>
+        </div>
+        <a class="bank-visual-action" href="#kontakt" data-interest="investment" data-i18n="heroPrimary">{{heroPrimary}}</a>
+      </div>
+      <figure class="bank-investment-figure">
+        <img alt="{{bankAlt}}" decoding="async" height="1086" loading="lazy" src="{{bankImage}}" width="1448" data-i18n-src="bankImage" data-i18n-alt="bankAlt">
+        <figcaption class="bank-visual-caption">
+          <strong data-i18n="bankCaptionTitle">{{bankCaptionTitle}}</strong>
+          <span data-i18n="bankCaptionCopy">{{bankCaptionCopy}}</span>
+        </figcaption>
+      </figure>
+      <a class="bank-visual-zoom" href="{{bankImage}}" rel="noopener noreferrer" target="_blank" data-i18n="bankZoom" data-i18n-href="bankImage">{{bankZoom}}</a>
+    </div>
+  </section>
+  <section class="section section-soft" id="details">
+    <div class="wrap">
+      <div class="detail-heading">
+        <div>
+          <p class="kicker section-label" data-i18n="detailsEyebrow">{{detailsEyebrow}}</p>
+          <h2 data-i18n="detailsTitle">{{detailsTitle}}</h2>
+          <p class="section-desc" data-i18n="detailsCopy">{{detailsCopy}}</p>
+        </div>
+        <div class="all-controls">
+          <button class="mini-button" data-open-all="" type="button" data-i18n="expandAll">{{expandAll}}</button>
+          <button class="mini-button" data-close-all="" type="button" data-i18n="collapseAll">{{collapseAll}}</button>
+        </div>
+      </div>
+      <div class="accordion">
+        <details id="vertraege">
+          <summary>
+            <span class="step">01</span>
+            <span class="summary-title">
+              <span data-i18n="detailTitle1">{{detailTitle1}}</span>
+              <span class="summary-sub" data-i18n="detailSub1">{{detailSub1}}</span>
+            </span>
+            <span aria-hidden="true" class="toggle-symbol"></span>
+          </summary>
+          <div class="accordion-body">
+            <p data-i18n="detail1Copy1">{{detail1Copy1}}</p>
+            <p data-i18n="detail1Copy2">{{detail1Copy2}}</p>
+          </div>
+        </details>
+        <details id="unternehmen">
+          <summary>
+            <span class="step">02</span>
+            <span class="summary-title">
+              <span data-i18n="detailTitle2">{{detailTitle2}}</span>
+              <span class="summary-sub" data-i18n="detailSub2">{{detailSub2}}</span>
+            </span>
+            <span aria-hidden="true" class="toggle-symbol"></span>
+          </summary>
+          <div class="accordion-body">
+            <p data-i18n="detail2Copy1">{{detail2Copy1}}</p>
+            <p data-i18n="detail2Copy2">{{detail2Copy2}}</p>
+          </div>
+        </details>
+        <details id="produktion">
+          <summary>
+            <span class="step">03</span>
+            <span class="summary-title">
+              <span data-i18n="detailTitle3">{{detailTitle3}}</span>
+              <span class="summary-sub" data-i18n="detailSub3">{{detailSub3}}</span>
+            </span>
+            <span aria-hidden="true" class="toggle-symbol"></span>
+          </summary>
+          <div class="accordion-body">
+            <p data-i18n="detail3Copy1">{{detail3Copy1}}</p>
+            <p data-i18n="detail3Copy2">{{detail3Copy2}}</p>
+          </div>
+        </details>
+        <details id="technologie">
+          <summary>
+            <span class="step">04</span>
+            <span class="summary-title">
+              <span data-i18n="detailTitle4">{{detailTitle4}}</span>
+              <span class="summary-sub" data-i18n="detailSub4">{{detailSub4}}</span>
+            </span>
+            <span aria-hidden="true" class="toggle-symbol"></span>
+          </summary>
+          <div class="accordion-body">
+            <p data-i18n="detail4Copy1">{{detail4Copy1}}</p>
+            <p data-i18n="detail4Copy2">{{detail4Copy2}}</p>
+          </div>
+        </details>
+        <details id="nachhaltigkeit">
+          <summary>
+            <span class="step">05</span>
+            <span class="summary-title">
+              <span data-i18n="detailTitle5">{{detailTitle5}}</span>
+              <span class="summary-sub" data-i18n="detailSub5">{{detailSub5}}</span>
+            </span>
+            <span aria-hidden="true" class="toggle-symbol"></span>
+          </summary>
+          <div class="accordion-body">
+            <p data-i18n="detail5Copy1">{{detail5Copy1}}</p>
+            <p data-i18n="detail5Copy2">{{detail5Copy2}}</p>
+          </div>
+        </details>
+        <details id="produkte">
+          <summary>
+            <span class="step">06</span>
+            <span class="summary-title">
+              <span data-i18n="detailTitle6">{{detailTitle6}}</span>
+              <span class="summary-sub" data-i18n="detailSub6">{{detailSub6}}</span>
+            </span>
+            <span aria-hidden="true" class="toggle-symbol"></span>
+          </summary>
+          <div class="accordion-body">
+            <p data-i18n="detail6Copy1">{{detail6Copy1}}</p>
+            <p data-i18n="detail6Copy2">{{detail6Copy2}}</p>
+            <p class="detail-note" data-i18n="detail6Note">{{detail6Note}}</p>
+            <p class="detail-note" data-i18n="frassCopy">{{frassCopy}}</p>
+          </div>
+        </details>
+        <details id="investition">
+          <summary>
+            <span class="step">07</span>
+            <span class="summary-title">
+              <span data-i18n="detailTitle7">{{detailTitle7}}</span>
+              <span class="summary-sub" data-i18n="detailSub7">{{detailSub7}}</span>
+            </span>
+            <span aria-hidden="true" class="toggle-symbol"></span>
+          </summary>
+          <div class="accordion-body">
+            <p data-i18n="detail7Copy1">{{detail7Copy1}}</p>
+            <p data-i18n="detail7Copy2">{{detail7Copy2}}</p>
+          </div>
+        </details>
+      </div>
     </div>
   </section>
   <section id="kontakt" class="section section-anchor contact-section">
@@ -173,7 +297,7 @@
 </main>
 <footer class="site-footer">
   <div class="container">
-    <div class="footer-top"><div><a class="brand" href="#start" aria-label="{{brandLabel}}" data-i18n-aria="brandLabel"><img src="/assets/flyweiss-logo-white.svg" width="200" height="55" loading="lazy" alt="FLYWEISS · PROTEIN • FUTURE"></a><p data-i18n="footerLine">{{footerLine}}</p></div><a class="back-to-top" href="#start"><span data-i18n="backToTop">{{backToTop}}</span><span aria-hidden="true">↑</span></a></div>
+    <div class="footer-top"><div><a class="brand" href="#start" aria-label="{{brandLabel}}" data-i18n-aria="brandLabel"><img src="/assets/flyweiss-logo-transparent.webp" width="200" height="55" loading="lazy" alt="FLYWEISS · PROTEIN • FUTURE"></a><p data-i18n="footerLine">{{footerLine}}</p></div><a class="back-to-top" href="#start"><span data-i18n="backToTop">{{backToTop}}</span><span aria-hidden="true">↑</span></a></div>
     <div class="footer-bottom"><span>© 2026 FLYWEISS DOO SOMBOR</span><div><a href="/{{lang}}/{{legalSlug}}/" data-legal="legal" data-i18n="legalLink">{{legalLink}}</a><a href="/{{lang}}/{{privacySlug}}/" data-legal="privacy" data-i18n="privacyLink">{{privacyLink}}</a></div></div>
   </div>
 </footer>

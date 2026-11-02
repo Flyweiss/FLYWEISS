@@ -1,0 +1,41 @@
+{
+  "baseCommit": "da5f6164a7953eafe9eaf465d43e26d1d4481361",
+  "date": "2026-11-02",
+  "build": "passed",
+  "staticVerification": "passed",
+  "translationsPerLanguage": 139,
+  "realEmailsSent": 0,
+  "responsiveAndInteractions": {
+    "views": 14,
+    "disclosures": 7,
+    "keyboard": true,
+    "localizedArtwork": true,
+    "languagePreservesForm": true,
+    "legalRoutes": 4,
+    "errors": [],
+    "realEmailsSent": 0
+  },
+  "mockedForm": {
+    "passed": [
+      "required fields",
+      "consent",
+      "honeypot",
+      "payload",
+      "duplicate-submit lock",
+      "language switch during submit",
+      "confirmed success",
+      "API rejection",
+      "server error",
+      "rate limit",
+      "network failure",
+      "input preservation",
+      "mobile layout"
+    ],
+    "interceptedRequests": 6,
+    "realEmailsSent": 0
+  },
+  "freshMobileReview": {
+    "headers": 1,
+    "overflow": false
+  }
+}

@@ -46,11 +46,15 @@ for (const lang of ['de','en']) {
   for (const match of html.matchAll(/data-i18n(?:-aria|-placeholder|-alt)?="([\w]+)"/g)) {
     if (!content[lang][match[1]]) throw new Error('Missing ' + lang + ' translation: ' + match[1]);
   }
-  for (const id of ['start','contracted-offtake','unternehmen','technologie','produkte','additional-value','nachhaltigkeit','investition','investoren','kontakt','contact-form']) {
+  for (const id of ['start','contracted-offtake','vorteile','markt','investmentvergleich','details','vertraege','unternehmen','produktion','technologie','produkte','nachhaltigkeit','investition','kontakt','contact-form']) {
     if (!html.includes('id="' + id + '"')) throw new Error('Missing section or form: ' + id);
   }
-  if (!/<\/section>\s*<section id="contracted-offtake"/.test(html.slice(html.indexOf('id="start"'), html.indexOf('id="unternehmen"')))) throw new Error('Contract section must immediately follow hero');
-  if ((html.match(/<li><span data-i18n="factLabel/g) || []).length !== 5) throw new Error('Company facts are incomplete');
+  if (!/<\/section>\s*<section\b[^>]*\bid="contracted-offtake"/.test(html.slice(html.indexOf('id="start"'), html.indexOf('id="unternehmen"')))) throw new Error('Contract section must immediately follow hero');
+  if ((html.match(/<details\b/g) || []).length !== 7) throw new Error('Seven information disclosures are required');
+  if (!html.includes('data-open-all') || !html.includes('data-close-all')) throw new Error('Disclosure controls missing');
+  if (!html.includes('investment-concept-' + lang + '.webp')) throw new Error('Localized investment artwork missing');
+  if (/Reploid|REPLOID/.test(html)) throw new Error('Removed manufacturer name is public');
+  if (!html.includes(content[lang].bankCaptionCopy)) throw new Error('Symbolic investment graphic qualification missing');
   if (!html.includes('lang="' + lang + '"') || !html.includes(content[lang].homeCopy)) throw new Error('Language not prerendered');
   if (!html.includes('mailto:office@flyweiss.com')) throw new Error('Office email missing');
   if (!html.includes('https://api.web3forms.com/submit')) throw new Error('Contact form endpoint missing');
@@ -72,5 +76,5 @@ async function auditPublicFiles(directory) {
 }
 await auditPublicFiles(resolve(root,'dist'));
 const js = await readFile(resolve(root,'dist/app.js'),'utf8');
-if (/WBPEF|Western Balkans Private Equity|office@wbpe|googletagmanager|__CONTENT__|flyweiss@icloud\.com/.test(js)) throw new Error('Outdated content or unresolved script');
+if (/WBPEF|Western Balkans Private Equity|office@wbpe|googletagmanager|__CONTENT__|flyweiss@icloud\.com|reploid/i.test(js)) throw new Error('Outdated content or unresolved script');
 console.log('Verified client copy, ' + Object.keys(content.de).length + ' translations per language, DE/EN routes, legal pages, public assets, contact form and office email.');
