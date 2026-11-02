@@ -48,7 +48,7 @@ async (page) => {
  await page.locator('.menu-button').click();await page.keyboard.press('Escape');ensure(await page.locator('#mobile-nav').isHidden(),'Escape did not close menu');
  for(const route of ['de/impressum/','de/datenschutz/','en/legal-notice/','en/privacy/']){
   const response=await page.goto('http://127.0.0.1:4177/'+route);ensure(response.status()===200,'Legal route failed');
-  ensure((await page.locator('.legal-main').innerText()).includes('FLYWEISS DOO SOMBOR'),'Registered name missing');
+  ensure((await page.locator('.legal-main').innerText()).includes('FLYWEISS D.O.O. SOMBOR'),'Registered name missing');
   ensure(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Legal overflow');
  }
  ensure(errors.length===0,'Runtime errors: '+errors.join(', '));

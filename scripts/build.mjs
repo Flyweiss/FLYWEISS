@@ -37,7 +37,7 @@ const legalBody = [
   '<p class="eyebrow">{{legalPreview}}</p><h1>{{legalLink}}</h1>',
   '<p class="notice">{{legalPreviewNote}}</p>',
   '<dl class="legal-data">',
-  '<dt>{{legalCompanyLabel}}</dt><dd>FLYWEISS DOO SOMBOR</dd>',
+  '<dt>{{legalCompanyLabel}}</dt><dd>FLYWEISS D.O.O. SOMBOR</dd>',
   '<dt>{{legalAddressLabel}}</dt><dd>Josićki put 85<br>Sombor, Serbia</dd>',
   '<dt>{{legalRegistrationLabel}}</dt><dd>22162152</dd>',
   '<dt>{{legalTaxLabel}}</dt><dd>115468829</dd>',
@@ -75,7 +75,7 @@ for (const lang of ['de','en']) {
       .replace(/href="[^"]*" data-lang="(de|en)"/g,(_,l)=>'href="/' + l + '/' + slugs[l][kind] + '/" data-lang="' + l + '"')
       .replace('data-lang="' + lang + '"','data-lang="' + lang + '" aria-current="true"');
     const body = (kind === 'legal' ? legalBody : privacyBody).replace('HOME_PATH',homePath(lang));
-    const footer = '<footer class="site-footer"><div class="container footer-bottom"><span>FLYWEISS DOO SOMBOR · PROTEIN • FUTURE</span><div><a href="/' + lang + '/' + slugs[lang].legal + '/">{{legalLink}}</a><a href="/' + lang + '/' + slugs[lang].privacy + '/">{{privacyLink}}</a></div></div></footer></body></html>';
+    const footer = '<footer class="site-footer"><div class="container footer-bottom"><span>FLYWEISS D.O.O. SOMBOR · PROTEIN • FUTURE</span><div><a href="/' + lang + '/' + slugs[lang].legal + '/">{{legalLink}}</a><a href="/' + lang + '/' + slugs[lang].privacy + '/">{{privacyLink}}</a></div></div></footer></body></html>';
     let html = render(prefix + body + footer, lang);
     html = html.replace(/<title>[^<]*<\/title>/,'<title>' + escape(title) + ' — FLYWEISS</title>')
       .replace(/<meta name="description" content="[^"]*">/,'<meta name="description" content="' + escape(note) + '">')

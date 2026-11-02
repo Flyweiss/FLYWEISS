@@ -64,7 +64,7 @@ await verifyPage('index.html');
 for (const route of ['de/impressum','de/datenschutz','en/legal-notice','en/privacy']) {
   const html = await verifyPage(route + '/index.html');
   if (!html.includes('class="legal-main"')) throw new Error('Missing legal content');
-  if (!html.includes('FLYWEISS DOO SOMBOR') || !html.includes('Josićki put 85')) throw new Error('Registered company details changed: ' + route);
+  if (!html.includes('FLYWEISS D.O.O. SOMBOR') || !html.includes('Josićki put 85')) throw new Error('Registered company details changed: ' + route);
   if (!html.includes('rel="canonical" href="https://www.flyweiss.com/' + route + '/"')) throw new Error('Incorrect legal canonical: ' + route);
 }
 async function auditPublicFiles(directory) {
