@@ -1,0 +1,41 @@
+{
+  "responsiveViews": [
+    "/impressum/:320",
+    "/impressum/:390",
+    "/impressum/:768",
+    "/impressum/:1440",
+    "/datenschutz/:320",
+    "/datenschutz/:390",
+    "/datenschutz/:768",
+    "/datenschutz/:1440",
+    "/en/legal-notice/:320",
+    "/en/legal-notice/:390",
+    "/en/legal-notice/:768",
+    "/en/legal-notice/:1440",
+    "/en/privacy/:320",
+    "/en/privacy/:390",
+    "/en/privacy/:768",
+    "/en/privacy/:1440"
+  ],
+  "languagePairs": 4,
+  "legacyRoutes": 2,
+  "noJavaScriptPages": 4,
+  "simulatedForm": true,
+  "submittedFields": [
+    "name",
+    "company",
+    "email",
+    "interest",
+    "message",
+    "consent",
+    "language",
+    "source"
+  ],
+  "storage": {
+    "local": [],
+    "session": [],
+    "serviceWorkers": 0
+  },
+  "errors": [],
+  "realEmailsSent": 0
+}

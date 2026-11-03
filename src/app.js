@@ -9,6 +9,7 @@ let formState = 'idle';
 let copyState = null;
 const slugs = {de:{legal:'impressum',privacy:'datenschutz'},en:{legal:'legal-notice',privacy:'privacy'}};
 const localePath = language => language === 'en' ? '/en/' : '/';
+const legalPath = (language, kind) => localePath(language) + slugs[language][kind] + '/';
 function renderCopyState() {
   document.querySelector('.copy-status').textContent = copyState ? CONTENT[lang][copyState] : '';
 }
@@ -52,7 +53,7 @@ function setLanguage(next, updateUrl = true) {
     if(link.dataset.lang === lang) link.setAttribute('aria-current','true'); else link.removeAttribute('aria-current');
     link.href = `${localePath(link.dataset.lang)}${location.hash}`;
   });
-  document.querySelectorAll('[data-legal]').forEach(link => link.href = `/${lang}/${slugs[lang][link.dataset.legal]}/`);
+  document.querySelectorAll('[data-legal]').forEach(link => link.href = legalPath(lang,link.dataset.legal));
   document.querySelectorAll('[data-i18n-src]').forEach(image => image.src = t[image.dataset.i18nSrc]);
   document.querySelectorAll('[data-i18n-href]').forEach(link => link.href = t[link.dataset.i18nHref]);
   setMenu(false);

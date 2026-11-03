@@ -26,6 +26,8 @@ Pratiti posao do `SUCCEED`, zatim uporediti sve javne fajlove sa buildom i prove
 
 - `src/index.html`: zajednički DE/EN raspored sa prevodnim placeholderima.
 - `src/content.json`: aktuelni javni tekstovi i poruke forme.
+- `src/legal-content.json`: DE/EN Impressum i politika privatnosti iz predaje od 03.11.2026, sa tehničkim usklađivanjem za Shipvela/AWS i Web3Forms.
+- `src/legal.css`: dopune samo za pravne stranice; postojeći stilovi početne stranice se ne menjaju.
 - `src/brief-copy.json`: kontrolna kopija efektivnih tekstova iz najnovije predaje.
 - `src/styles.css`: postojeći header, forma, footer i pravni prikaz.
 - `src/protein-future.css`: dostavljen Protein Future dizajn i prilagođavanja za postojeću aplikaciju.
@@ -41,7 +43,7 @@ U novoj javnoj verziji nema imena proizvođača mašina. Proizvodna lokacija ost
 
 Planirane mašine vrednosti oko 9 miliona evra i odgovornosti partnera preneti su iz klijentske predaje. Podrška oko 60% prihvatljivih investicionih troškova ostaje cilj uz uslov podobnosti i odobrenja. Mrežna nezavisnost je cilj energetskog planiranja. Kozmetičke, kolagenske i lepljive primene su razvojni potencijal; tehnička/komercijalna provera i uslovi primene ostaju vidljivi. Tehnička provera sajta ne potvrđuje originalne ugovore, vlasništvo, osiguranje ili status podsticaja.
 
-Korisnik je izričito zatražio neposredni push i javnu objavu novih dopuna. DNS, hosting i indeksiranje nisu deo ove izmene.
+Korisnik je 03.11.2026. potvrdio da je pravnik odobrio ovu pripremljenu DE/EN verziju sa Shipvela/AWS i Web3Forms izmenama. Potvrdio je i prijem poruka na `office@flyweiss.com` i odredište postojeće Web3Forms forme. Time je ispunjen njegov uslov za ranije traženi push na main i live objavu. Ove dve potvrde potiču od korisnika; tehnička provera nije uključivala slanje stvarnih poruka. DNS, hosting i pravila indeksiranja se ne menjaju.
 
 ## Grafikoni i slike
 
@@ -57,8 +59,22 @@ Javna adresa je `office@flyweiss.com`, sa mailto linkom i kopiranjem. Ranije aut
 
 Uspeh forme zahteva uspešan HTTP odgovor i `success: true`. Odbijanje, HTTP 500/429, mrežna greška i timeout čuvaju unos. Kontrole su zaključane tokom slanja; nema automatskog ponavljanja. Promena jezika čuva otvorene sekcije i unos forme. Clipboard greška prikazuje uputstvo za ručno kopiranje.
 
-Rute su `/de/impressum/`, `/de/datenschutz/`, `/en/legal-notice/` i `/en/privacy/`. Zadržani su postojeći registarski podaci i oznaka nacrta pravnih tekstova. Privatnost opisuje stvarnu formu, Web3Forms i Shipvela hosting. `noindex, nofollow` i robots `Disallow: /` ostaju aktivni. Nema analitike, eksternih fontova ili automatskog videa.
+Pripremljene kanonske rute su `/impressum/`, `/datenschutz/`, `/en/legal-notice/` i `/en/privacy/`. Ranije nemačke rute `/de/impressum/` i `/de/datenschutz/` ostaju kao identične kopije sa kanonskim adresama bez `/de/`. Footer i link privatnosti uz formu prate jezik, a pravne stranice menjaju jezik uz zadržavanje iste vrste dokumenta. Sadrže dostavljene registarske podatke, bez javnih internih napomena ili oznaka nacrta. `noindex, nofollow` i robots `Disallow: /` ostaju aktivni.
+
+Tehnička provera 03.11.2026: `www.flyweiss.com` pokazuje na AWS CloudFront; HTTP zaglavlja i postojeći Shipvela projekat potvrđuju AWS Amplify hosting u `eu-central-1`. World4You je potvrđen za nameservere; to nije dokaz da se sadržaj sajta hostuje kod World4You. MX je `mail.flyweiss.com`, sa A zapisom `81.19.149.80`. To potvrđuje DNS za poštu, ali ne i postojanje/prijem konkretnog sandučeta.
+
+U čistom pregledaču na live DE/EN stranicama nisu zabeleženi cookies, localStorage, sessionStorage ili spoljašnji zahtevi pri učitavanju. Kod koristi sistemske fontove i sopstvene resurse; nema analitike, marketinga, mapa, videa ili Captcha skripti. Web3Forms se poziva tek pri slanju. Provera forme simulira odgovor i ne šalje stvarne poruke. Korisnik je naknadno potvrdio da je postojeći Web3Forms ključ usmeren na `office@flyweiss.com` i da je prijem poruka potvrđen.
+
+Usklađivanja sa predajom: zamenjen je planirani World4You hosting stvarnim Shipvela/AWS hostingom i uklonjena nedokazana tvrdnja o dvonedeljnom roku serverlogova; opisana je postojeća kontakt forma, poslata polja i tehnički metapodaci; dodati su Web3Forms i informacije iz njegovih objavljenih pravila o primaocima, međunarodnoj obradi i roku do tri godine. Ti navodi ne potvrđuju konkretan tarifni plan ili potpisan DPA. Zadržan je ranije traženi prikaz `FLYWEISS D.O.O. SOMBOR`; pravni naziv i ovlašćenja treba uporediti sa aktuelnim APR izvodom.
+
+Završna pravna provera ove verzije i prijem poruka su potvrđeni od korisnika. Tehnička provera sama ne potvrđuje pravna ovlašćenja, ugovore, eventualno dejstvo DSGVO/člana 27, konkretne rokove čuvanja ili naloge pružalaca usluga. Ranije izdvojene stavke ostaju u internom izveštaju radi evidencije; nisu javni tekst niti novi zahtevi za odobrenje. Interne napomene nisu deo `dist`.
+
+Predaja u ovoj poruci sadrži samo nalepljen tekst. ZIP i `START_HIER_Stefan.txt` nisu bili priloženi; sadržaj za javne stranice rekonstruisan je iz dostavljenih DE/EN odeljaka. Kompletan pregled sa izveštajem priprema se u `output/FLYWEISS_legal_review_2026-11-03.zip`, odvojeno od javnog build-a.
+
+Provereni izvori za tehnička usklađivanja: [Shipvela privatnost](https://shipvela.com/privacy), [Web3Forms privatnost](https://web3forms.com/privacy), [Web3Forms DPA](https://web3forms.com/dpa) i [kontakt Poverenika](https://poverenik.rs/kontakt/?script=lat). U APR javnoj pretrazi potvrđeni su aktivan status, upisani naziv `FLYWEISS DOO SOMBOR`, MB `22162152` i sedište `Josićki put 85, 25000 Sombor`. U registru se i dalje vidi ranija iCloud adresa; na sajtu ostaje korisnički zadati `office@flyweiss.com`. Aktuelan overen izvod, PIB i način zastupanja nisu nezavisno potvrđeni; ti podaci ostaju preneti iz dostavljenog teksta.
 
 ## Provere
 
 Build, check, sintaksa JavaScript-a i pregled diff-a obavezni su pre objave. `output/playwright/protein-future-checks.js` proverava oba jezika na širinama 320, 390, 560, 768, 1024, 1440 i 1920 px, sedam sekcija, tastaturu, kolektivno otvaranje/zatvaranje, dvojezične slike, investitorske CTA, mobilni meni i četiri pravne rute. Forma se proverava simuliranim odgovorima bez stvarnih mejlova. QA snimci i interni dokazi ostaju izvan javnog build-a.
+
+`output/playwright/legal-pages-checks.js` proverava četiri kanonske pravne rute na 320, 390, 768 i 1440 px, oba smera promene jezika, footere, povratne linkove, dve stare nemačke adrese, rad bez JavaScript-a, službene mailto linkove i odsustvo internih oznaka. Simulacijom forme potvrđena su polja opisana u privatnosti. Poređenjem sa poslednjim live commitom potvrđeno je da su sadržaj početnih/investitorskih stranica (osim linka privatnosti), header, metapodaci, dva postojeća CSS fajla i svih 49 fajlova u `src/assets` nepromenjeni.

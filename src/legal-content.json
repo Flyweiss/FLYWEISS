@@ -1,0 +1,236 @@
+{
+  "de": {
+    "eyebrow": "FLYWEISS",
+    "updated": "Stand: 3. November 2026",
+    "legal": {
+      "title": "Impressum",
+      "description": "Rechtliche Informationen zu FLYWEISS D.O.O. SOMBOR, Kontakt und Registerangaben.",
+      "sections": [
+        {
+          "title": "Angaben zum Unternehmen",
+          "paragraphs": [
+            "FLYWEISS D.O.O. SOMBOR\nJosićki put 85\nSombor, Republik Serbien"
+          ]
+        },
+        {
+          "title": "Vertretungsberechtigte Personen",
+          "paragraphs": [
+            "Andria Mitić\nMartin Kurt Holzer"
+          ]
+        },
+        {
+          "title": "Registerangaben",
+          "paragraphs": [
+            "Eingetragen im Register der Wirtschaftsunternehmen der Republik Serbien (Agencija za privredne registre – APR).",
+            "Registrierungsnummer (Matični broj): 22162152",
+            "Steueridentifikationsnummer (PIB): 115468829"
+          ]
+        },
+        {
+          "title": "Kontakt",
+          "paragraphs": [
+            "E-Mail: office@flyweiss.com\nWebsite: https://flyweiss.com/"
+          ]
+        },
+        {
+          "title": "Verantwortlich für diese Website",
+          "paragraphs": [
+            "FLYWEISS D.O.O. SOMBOR, Josićki put 85, Sombor, Republik Serbien."
+          ]
+        }
+      ]
+    },
+    "privacy": {
+      "title": "Datenschutzerklärung",
+      "description": "Informationen zum Datenschutz bei FLYWEISS: Website, Kontaktformular, E-Mail und Ihre Rechte.",
+      "sections": [
+        {
+          "title": "1. Verantwortliche Stelle",
+          "paragraphs": [
+            "Verantwortlich für die Verarbeitung personenbezogener Daten im Zusammenhang mit dieser Website ist FLYWEISS D.O.O. SOMBOR, Josićki put 85, Sombor, Republik Serbien. E-Mail: office@flyweiss.com.",
+            "Diese Datenschutzerklärung informiert über die Verarbeitung personenbezogener Daten beim Aufruf unserer Website und bei einer Kontaktaufnahme mit uns."
+          ]
+        },
+        {
+          "title": "2. Zugriff auf die Website und Server-Protokolle",
+          "paragraphs": [
+            "Bei der Bereitstellung der Website werden technisch erforderliche Daten verarbeitet. Hierzu können die IP-Adresse des zugreifenden Geräts, Datum und Uhrzeit der Anfrage, aufgerufene Seite beziehungsweise Datei, Browser- und Betriebssysteminformationen sowie die zuvor besuchte Internetadresse (Referrer) gehören.",
+            "Die Verarbeitung dient der technischen Auslieferung der Website, der Stabilität, der Fehleranalyse und der Sicherheit gegen Missbrauch. Die Verarbeitung stützt sich, soweit einschlägig, auf berechtigte Interessen an einem sicheren und funktionsfähigen Webauftritt nach Artikel 12 des serbischen Datenschutzgesetzes sowie Artikel 6 Absatz 1 Buchstabe f der DSGVO.",
+            "Die Website wird als statischer Webauftritt über Shipvela bereitgestellt. Shipvela wird von Content Petit LLC, 16192 Coastal Highway, Lewes, DE 19958, USA, betrieben. Die technische Auslieferung erfolgt über Amazon Web Services (AWS Amplify und Amazon CloudFront)."
+          ]
+        },
+        {
+          "title": "3. Kontaktaufnahme per E-Mail und Kontaktformular",
+          "paragraphs": [
+            "Wenn Sie uns per E-Mail oder über das Kontaktformular kontaktieren, verarbeiten wir die von Ihnen übermittelten Kontaktdaten und den Inhalt Ihrer Nachricht, um die Anfrage zu beantworten, die Kommunikation zu dokumentieren und gegebenenfalls eine geschäftliche Zusammenarbeit vorzubereiten.",
+            "Rechtsgrundlage ist je nach Anlass der Kontaktaufnahme die Durchführung vorvertraglicher Maßnahmen auf Ihre Anfrage oder unser berechtigtes Interesse an der Bearbeitung geschäftlicher Anfragen (Artikel 12 des serbischen Datenschutzgesetzes; soweit einschlägig Artikel 6 Absatz 1 Buchstaben b und f der DSGVO). Falls gesetzliche Aufbewahrungspflichten greifen, erfolgt die weitere Speicherung auf entsprechender gesetzlicher Grundlage.",
+            "Wir bewahren die Korrespondenz nur so lange auf, wie dies für die Bearbeitung, nachvollziehbare Geschäftsabläufe oder gesetzliche Pflichten erforderlich ist.",
+            "Das Kontaktformular erfasst Ihren Namen, Ihre E-Mail-Adresse, Ihr Anliegen, Ihre Nachricht und die Datenschutzeinwilligung sowie, falls angegeben, Ihr Unternehmen. Beim Absenden werden diese Angaben zusammen mit der gewählten Sprache und der Seitenadresse direkt über eine verschlüsselte HTTPS-Verbindung an Web3Forms (Web3Creative) übermittelt, um die Anfrage per E-Mail an uns weiterzuleiten. Dabei können auch technische Verbindungsdaten wie IP-Adresse und Zeitpunkt verarbeitet werden.",
+            "Die Daten werden erst beim Absenden an den Formulardienst übertragen. Die Website speichert den Formularinhalt nicht in einer eigenen Datenbank. Alternativ können Sie uns direkt per E-Mail an office@flyweiss.com kontaktieren."
+          ]
+        },
+        {
+          "title": "4. Hosting, Dienstleister und Empfänger",
+          "paragraphs": [
+            "Für den technischen Betrieb der Website und für die Kommunikation können Hosting-, E-Mail- und IT-Dienstleister eingesetzt werden. Sie erhalten nur die Daten, die zur Erbringung ihrer jeweiligen Leistungen erforderlich sind. Andere Empfänger kommen insbesondere in Betracht, wenn eine rechtliche Verpflichtung besteht oder dies zur Bearbeitung Ihrer Anfrage notwendig ist.",
+            "Die verantwortliche Gesellschaft hat ihren Sitz in Serbien. Personenbezogene Angaben aus Anfragen können deshalb bei FLYWEISS in Serbien verarbeitet werden. Bei Datenübermittlungen beachten wir die jeweils anwendbaren Datenschutzvorgaben.",
+            "Für die Formularverarbeitung setzen wir Web3Forms (Web3Creative) ein. Der Anbieter arbeitet nach eigenen Angaben von Indien aus und nutzt Infrastruktur in mehreren Regionen. Zu den benannten Unterauftragsverarbeitern gehören AWS, Cloudflare und Hetzner; zur Spamprüfung können IP- und E-Mail-Adressen an CleanTalk oder Akismet übermittelt werden.",
+            "Nach Angaben von Web3Forms sind für einschlägige Übermittlungen aus dem Europäischen Wirtschaftsraum, dem Vereinigten Königreich und der Schweiz Standardvertragsklauseln in dessen Auftragsverarbeitungsvereinbarung vorgesehen. Weitere Informationen: https://web3forms.com/privacy und https://web3forms.com/dpa."
+          ]
+        },
+        {
+          "title": "5. Cookies und eingebundene Dienste",
+          "paragraphs": [
+            "Diese Website setzt keine Cookies und verwendet keine Analyse- oder Marketingdienste und kein Tracking zur Erstellung von Nutzerprofilen. Die Sprachwahl ist Bestandteil der URL; sie wird nicht in Cookies oder im lokalen Browserspeicher abgelegt. Technisch erforderliche Verbindungs- und Protokolldaten können beim Hosting verarbeitet werden.",
+            "Die Website verwendet Systemschriftarten. Bilder und Skripte werden von der Website selbst geladen. Externe Karten, Videos, Social-Media-Widgets und Captcha-Skripte sind nicht eingebunden. Eine Verbindung zum externen Formulardienst Web3Forms wird erst beim Absenden des Kontaktformulars aufgebaut.",
+            "Werden künftig zusätzliche Funktionen eingebunden, wird diese Erklärung vor dem Einsatz entsprechend ergänzt; erforderliche Einwilligungen werden vorher eingeholt."
+          ]
+        },
+        {
+          "title": "6. Speicherdauer",
+          "paragraphs": [
+            "Personenbezogene Daten werden gelöscht, sobald sie für den jeweiligen Zweck nicht mehr erforderlich sind, sofern nicht gesetzliche Aufbewahrungsfristen, die Wahrung von Rechten oder andere zulässige Gründe eine weitere Speicherung erfordern.",
+            "Web3Forms nennt für Formularübermittlungen eine maximale Speicherdauer von drei Jahren, sofern keine frühere Löschung oder kürzere tarifabhängige Frist gilt. Zugestellte E-Mail-Nachrichten können unabhängig davon in unserem Postfach gespeichert bleiben, soweit dies für die genannten Zwecke oder gesetzliche Pflichten erforderlich ist."
+          ]
+        },
+        {
+          "title": "7. Ihre Rechte",
+          "paragraphs": [
+            "Nach Maßgabe der anwendbaren Vorschriften können Sie Auskunft über Ihre personenbezogenen Daten sowie deren Berichtigung oder Löschung verlangen. Unter den gesetzlichen Voraussetzungen bestehen außerdem Rechte auf Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch. Bei einer Verarbeitung auf Einwilligungsbasis kann eine Einwilligung mit Wirkung für die Zukunft widerrufen werden.",
+            "Wenden Sie sich zur Ausübung Ihrer Rechte an office@flyweiss.com."
+          ]
+        },
+        {
+          "title": "8. Beschwerdemöglichkeit",
+          "paragraphs": [
+            "Sie können sich an den serbischen Beauftragten für Informationen von öffentlichem Interesse und den Schutz personenbezogener Daten (Poverenik za informacije od javnog značaja i zaštitu podataka o ličnosti) wenden: Bulevar kralja Aleksandra 15, 11120 Belgrad, Serbien; office@poverenik.rs; https://poverenik.rs/.",
+            "Soweit die europäische Datenschutz-Grundverordnung auf eine konkrete Verarbeitung Anwendung findet, können gegebenenfalls auch die dort vorgesehenen aufsichtsbehördlichen Beschwerderechte bestehen."
+          ]
+        },
+        {
+          "title": "9. Änderungen dieser Erklärung",
+          "paragraphs": [
+            "Wir aktualisieren diese Datenschutzerklärung, wenn sich die rechtlichen Anforderungen oder die tatsächliche Verarbeitung auf der Website ändern. Maßgeblich ist die jeweils auf dieser Website veröffentlichte Fassung."
+          ]
+        }
+      ]
+    }
+  },
+  "en": {
+    "eyebrow": "FLYWEISS",
+    "updated": "Last updated: 3 November 2026",
+    "legal": {
+      "title": "Legal Notice",
+      "description": "Company details, registration information and contact details for FLYWEISS D.O.O. SOMBOR.",
+      "sections": [
+        {
+          "title": "Company details",
+          "paragraphs": [
+            "FLYWEISS D.O.O. SOMBOR\nJosićki put 85\nSombor, Republic of Serbia"
+          ]
+        },
+        {
+          "title": "Authorised representatives",
+          "paragraphs": [
+            "Andria Mitić\nMartin Kurt Holzer"
+          ]
+        },
+        {
+          "title": "Registration details",
+          "paragraphs": [
+            "Registered with the Serbian Business Registers Agency (Agencija za privredne registre – APR).",
+            "Company registration number (Matični broj): 22162152",
+            "Tax identification number (PIB): 115468829"
+          ]
+        },
+        {
+          "title": "Contact",
+          "paragraphs": [
+            "Email: office@flyweiss.com\nWebsite: https://flyweiss.com/"
+          ]
+        },
+        {
+          "title": "Website operator",
+          "paragraphs": [
+            "FLYWEISS D.O.O. SOMBOR, Josićki put 85, Sombor, Republic of Serbia."
+          ]
+        }
+      ]
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "description": "How FLYWEISS processes personal data through this website, the contact form and email, and your privacy rights.",
+      "sections": [
+        {
+          "title": "1. Data controller",
+          "paragraphs": [
+            "The controller responsible for the processing of personal data in connection with this website is FLYWEISS D.O.O. SOMBOR, Josićki put 85, Sombor, Republic of Serbia. Email: office@flyweiss.com.",
+            "This privacy notice explains how personal data may be processed when you visit our website or contact us."
+          ]
+        },
+        {
+          "title": "2. Website access and server logs",
+          "paragraphs": [
+            "When this website is provided, technically necessary data are processed. These may include the IP address of the accessing device, date and time of access, the page or file requested, browser and operating-system details, and the referring website address.",
+            "The purposes are to deliver the website, maintain its stability, troubleshoot errors and protect it against misuse. Where applicable, this processing is based on legitimate interests in operating a secure and functional website under Article 12 of the Serbian Personal Data Protection Law and Article 6(1)(f) GDPR.",
+            "This static website is hosted through Shipvela, operated by Content Petit LLC, 16192 Coastal Highway, Lewes, DE 19958, United States. The website is delivered using Amazon Web Services (AWS Amplify and Amazon CloudFront)."
+          ]
+        },
+        {
+          "title": "3. Contact by email and contact form",
+          "paragraphs": [
+            "When you contact us by email or through the contact form, we process the contact details and message content you provide in order to respond to your inquiry, document our correspondence and, where appropriate, prepare a potential business relationship.",
+            "Depending on the purpose of your inquiry, the legal basis is taking pre-contractual steps at your request or our legitimate interest in handling business inquiries (Article 12 of the Serbian Personal Data Protection Law; where applicable Article 6(1)(b) and (f) GDPR). Where a statutory retention obligation applies, we retain relevant data on that legal basis.",
+            "We retain correspondence only for as long as necessary to handle the matter, maintain appropriate business records or comply with legal obligations.",
+            "The contact form collects your name, email address, subject of inquiry, message and privacy consent, together with your company if you provide it. When you submit the form, these details, the selected language and the page address are sent directly over an encrypted HTTPS connection to Web3Forms (Web3Creative) to forward your inquiry to us by email. Technical connection data, such as the IP address and submission time, may also be processed.",
+            "Data are transmitted to the form service only when you submit the form. This website does not store form content in its own database. You can alternatively contact us directly by email at office@flyweiss.com."
+          ]
+        },
+        {
+          "title": "4. Hosting, service providers and recipients",
+          "paragraphs": [
+            "We may engage hosting, email and IT service providers to operate the website and handle communications. They receive only the data necessary to provide their services. Additional disclosures may take place when legally required or necessary to handle your inquiry.",
+            "The controller is established in Serbia. Personal data included in inquiries may therefore be processed by FLYWEISS in Serbia. Any transfers are handled in accordance with the data-protection rules applicable to the specific processing.",
+            "We use Web3Forms (Web3Creative) to process form submissions. The provider states that it operates from India and uses infrastructure in multiple regions. Its named sub-processors include AWS, Cloudflare and Hetzner; IP and email addresses may be sent to CleanTalk or Akismet for spam checks.",
+            "Web3Forms states that its Data Processing Agreement provides Standard Contractual Clauses for relevant transfers from the European Economic Area, the United Kingdom and Switzerland. Further information: https://web3forms.com/privacy and https://web3forms.com/dpa."
+          ]
+        },
+        {
+          "title": "5. Cookies and embedded services",
+          "paragraphs": [
+            "This website does not set cookies or use analytics, marketing services or tracking to create user profiles. The selected language is part of the URL and is not stored in cookies or local browser storage. Technically necessary connection and log data may be processed by the hosting infrastructure.",
+            "The website uses system fonts. Images and scripts are served by the website itself. There are no embedded third-party maps, videos, social-media widgets or CAPTCHA scripts. A connection to the external Web3Forms service is made only when you submit the contact form.",
+            "If additional features are introduced, this notice will be updated before their use and any required consent will be obtained in advance."
+          ]
+        },
+        {
+          "title": "6. Retention periods",
+          "paragraphs": [
+            "Personal data are deleted when no longer needed for the relevant purpose, unless statutory retention duties, the establishment or defence of legal claims or another lawful reason require longer storage.",
+            "Web3Forms states that form submissions are retained for a maximum of three years, unless deleted earlier or a shorter plan-specific period applies. Delivered email messages may remain in our mailbox independently where necessary for the purposes described above or to meet legal obligations."
+          ]
+        },
+        {
+          "title": "7. Your rights",
+          "paragraphs": [
+            "Subject to applicable law, you may request access to, rectification or erasure of your personal data. Where the legal conditions are met, you may also request restriction of processing, data portability or object to processing. Where processing is based on consent, you may withdraw that consent at any time with future effect.",
+            "To exercise your rights, contact office@flyweiss.com."
+          ]
+        },
+        {
+          "title": "8. Right to lodge a complaint",
+          "paragraphs": [
+            "You may contact the Serbian Commissioner for Information of Public Importance and Personal Data Protection (Poverenik za informacije od javnog značaja i zaštitu podataka o ličnosti): Bulevar kralja Aleksandra 15, 11120 Belgrade, Serbia; office@poverenik.rs; https://poverenik.rs/.",
+            "Where the European General Data Protection Regulation applies to particular processing, additional rights to lodge complaints with a competent supervisory authority may apply."
+          ]
+        },
+        {
+          "title": "9. Changes to this notice",
+          "paragraphs": [
+            "We will update this privacy notice when legal requirements or the actual processing carried out through this website change. The version published on this website is the applicable version."
+          ]
+        }
+      ]
+    }
+  }
+}
