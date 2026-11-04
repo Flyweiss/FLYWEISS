@@ -88,7 +88,6 @@
 .protein-future .hero-inner{min-height:0;height:auto;display:block;padding:88px 0 97px}
 .protein-future .hero-copy{max-width:780px;margin:0;width:100%}
 .protein-future .hero .hero-wordmark{max-width:100%;white-space:nowrap}
-.protein-future .factory-caption{top:auto;bottom:16px;right:25px;max-width:390px;border:0}
 .protein-future .hero-subline{font-size:21px;letter-spacing:.15em;margin:16px 0 20px}
 .protein-future .bank-visual-caption strong{display:block;margin-bottom:4px}
 .protein-future .bank-visual-caption span{display:block}
@@ -108,7 +107,6 @@
  .protein-future .hero-tagline{font-size:27px;line-height:1.23;margin-bottom:18px}
  .protein-future .hero .buttons{display:flex;flex-direction:column;align-items:stretch}
  .protein-future .hero .btn{width:100%;font-size:13px;min-height:49px}
- .protein-future .factory-caption{font-size:9px;bottom:13px;right:17px;left:17px;max-width:none;text-align:center}
  .protein-future .brand img{width:clamp(155px,49vw,210px)}
  .protein-future .bank-visual-head h2{font-size:33px}
  .protein-future .contact-actions .button{width:100%;justify-content:space-between}
